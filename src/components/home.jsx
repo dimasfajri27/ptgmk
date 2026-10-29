@@ -1,9 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
-import carousel1 from  "../assets/carousel1.png";
-import carousel2 from "../assets/carousel2.png"
-import carousel3 from "../assets/carousel3.png"
-import carousel4 from "../assets/carousel4.png"
+import carousel1 from "../assets/carousel1.png";
+import carousel2 from "../assets/carousel2.png";
+import carousel3 from "../assets/carousel3.png";
+import carousel4 from "../assets/carousel4.png";
 
 function Home() {
   return (
@@ -33,8 +33,8 @@ function Home() {
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
-            <img src={carousel1} class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block">
+            <img src={carousel1} class="d-block w-50 h-50 mx-auto" alt="..." />
+            <div class="carousel-caption d-none d-md-block justify-content-center">
               <h5>First slide label</h5>
               <p>
                 Some representative placeholder content for the first slide.
@@ -42,8 +42,8 @@ function Home() {
             </div>
           </div>
           <div class="carousel-item" data-bs-interval="2000">
-            <img src={carousel2} class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block">
+            <img src={carousel2} class="d-block w-50 h-50 mx-auto" alt="..." />
+            <div class="carousel-caption d-none d-md-block justify-content-center">
               <h5>Second slide label</h5>
               <p>
                 Some representative placeholder content for the second slide.
@@ -51,8 +51,8 @@ function Home() {
             </div>
           </div>
           <div class="carousel-item">
-            <img src={carousel3} class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block">
+            <img src={carousel3} class="d-block w-50 h-50 mx-auto" alt="..." />
+            <div class="carousel-caption d-none d-md-block justify-content-center">
               <h5>Third slide label</h5>
               <p>
                 Some representative placeholder content for the third slide.
