@@ -4,11 +4,18 @@ function Footer() {
             <div className="container">
                 <div className="row align-itmes-center">
                     <div className="col-md-6">
-                        <h5 className="fw-bold">TechCompany</h5>
+                        <h5 className="fw-bold">PT. Geo Mandiri Kreasi</h5>
                         <p className="text-white-50 mb-md-0">
-                            Technology for better business
+                            Consultant, Training & Inspection
+
                         </p>
                     </div>
+
+                    <div className="col-md-6 mb-4">
+                        <h5>Lokasi Kami</h5>
+                    </div>
+                        
+                   
                     <div className="col-md-6 text-md-end mt-3 mt-md-0">
                         <a href="#" className="text-white me-3">
                             <i className="bi bi-facebook"></i>
