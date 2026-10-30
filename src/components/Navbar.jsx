@@ -20,11 +20,17 @@ function Navbar() {
         <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <div className="navbar-nav">
             <a className="nav-link active" aria-current="page" href="#">Home</a>
-            <a className="nav-link" href="#">Features</a>
-            <a className="nav-link" href="#">Pricing</a>
-            <a className="nav-link disabled" aria-disabled="true">Disabled</a>
+            <a className="nav-link" href="#">Program Latihan</a>
+            <a className="nav-link" href="#">About</a>
           </div>
+           <form className="d-flex ms-3" role="search" >
+        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button className="btn btn-outline-success" type="submit">Search</button>
+      </form>
         </div>
+
+       
+
       </div>
     </nav>
     </>
