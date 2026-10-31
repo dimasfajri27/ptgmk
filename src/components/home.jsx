@@ -37,14 +37,7 @@ function Home() {
             Perancah, Ahli k3 lingkungan Kerja)
           </p>
           <div className="card-text list-border ">
-            <button
-              className="btn btn-primary btn-sm fw-bold list-border-none"
-              style={{
-                transition: "all 0.3s ease",
-              }}
-            >
-              <a className="text-decoration-none text-white" href="#"><small>Program Latihan</small></a>
-            </button>
+           
           </div>
         </div>
       </div>

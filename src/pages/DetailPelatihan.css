@@ -1,0 +1,140 @@
+
+.detail-page {
+  background-color: #ffffff;
+  min-height: 100vh;
+  padding: 40px 20px 70px;
+}
+
+.detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Layout dua kolom */
+.detail-layout {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 35px;
+  align-items: start;
+}
+
+/* Kolom kiri */
+.detail-content {
+  min-width: 0;
+}
+
+.detail-image-wrapper {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.detail-image {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+}
+
+.detail-heading h1 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #171717;
+  margin-bottom: 14px;
+}
+
+.detail-heading p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Informasi pelatihan */
+.detail-information {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.detail-information-item {
+  padding: 12px 5px;
+}
+
+.detail-icon {
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+.detail-information-item h5 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.detail-information-item p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Kolom kanan */
+.registration-column {
+  position: sticky;
+  top: 100px;
+}
+
+.registration-card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.registration-card h3 {
+  font-size: 23px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.registration-description {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 22px;
+}
+
+/* Tampilan HP dan tablet */
+@media (max-width: 768px) {
+  .detail-page {
+    padding: 20px 15px 40px;
+  }
+
+  .detail-layout {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .detail-image {
+    height: 270px;
+  }
+
+  .detail-heading h1 {
+    font-size: 25px;
+  }
+
+  .detail-information-item h5 {
+    font-size: 15px;
+  }
+
+  .detail-information-item p {
+    font-size: 13px;
+  }
+
+  .registration-column {
+    position: static;
+  }
+
+  .registration-card {
+    padding: 20px;
+  }
+}
