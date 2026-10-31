@@ -1,15 +1,31 @@
 import React, { useState } from "react";
+import FormPendaftaran from "./FormPendaftaran";
 
 function ContentProglat() {
   // State untuk menyimpan kategori yang sedang dipilih (default: 'Semua')
   const [selectedCategory, setSelectedCategory] = useState("Semua");
   const [showAll, setShowAll] = useState(false);
   // Daftar data konten (foto, judul, deskripsi, kategori)
+  const [selectedProgram, setSelectedProgram] = useState(null);
+
+const [dataPendaftar, setDataPendaftar] = useState([]);
+
+const handleSubmitPendaftaran = (data) => {
+  setDataPendaftar((prev) => [...prev, data]);
+
+  console.log("Data Pendaftar:", [
+    ...dataPendaftar,
+    data,
+  ]);
+
+  setSelectedProgram(null);
+};
+
   const items = [
     {
       id: 1,
       title: "Ahli K3 Umum",
-      category: "Sertifikasi",
+      category: "Keahlian-K3-Umum",
       image:
         "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80",
       description:
@@ -17,8 +33,8 @@ function ContentProglat() {
     },
     {
       id: 2,
-      title: "Training Konsultan K3",
-      category: "Training",
+      title: "Auditor SMK3",
+      category: "Sistem-Managemen-K3-(SMK3)",
       image:
         "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
       description:
@@ -26,8 +42,8 @@ function ContentProglat() {
     },
     {
       id: 3,
-      title: "Event Manajemen K3 & SMK3",
-      category: "Event",
+      title: "Ahli K3 Kimia",
+      category: "Ergonomi-Lingkungan-Kerja-dan-Bahan-Berbahaya",
       image:
         "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80",
       description:
@@ -35,8 +51,8 @@ function ContentProglat() {
     },
     {
       id: 4,
-      title: "Training Konsultan K3",
-      category: "Training",
+      title: "Petugas K3 Kimia",
+      category: "Ergonomi-Lingkungan-Kerja-dan-Bahan-Berbahaya",
       image:
         "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
       description:
@@ -44,8 +60,8 @@ function ContentProglat() {
     },
     {
       id: 5,
-      title: "Training Konsultan K3",
-      category: "Training",
+      title: "Ahli K3 Muda Lingkungan",
+      category: "Ergonomi-Lingkungan-Kerja-dan-Bahan-Berbahaya",
       image:
         "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
       description:
@@ -53,8 +69,8 @@ function ContentProglat() {
     },
     {
       id: 6,
-      title: "Training Konsultan K3",
-      category: "Training",
+      title: "Teknisi Ruang Terbatas",
+      category: "Ergonomi-Lingkungan-Kerja-dan-Bahan-Berbahaya",
       image:
         "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
       description:
@@ -62,8 +78,8 @@ function ContentProglat() {
     },
     {
       id: 7,
-      title: "Training Konsultan K3",
-      category: "Training",
+      title: "Petugas K3 Penyelamatan",
+      category: "Ergonomi-Lingkungan-Kerja-dan-Bahan-Berbahaya",
       image:
         "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
       description:
@@ -71,8 +87,8 @@ function ContentProglat() {
     },
     {
       id: 8,
-      title: "Training Konsultan K3",
-      category: "Training",
+      title: "Teknisi K3 Deteksi Gas",
+      category: "Ergonomi-Lingkungan-Kerja-dan-Bahan-Berbahaya",
       image:
         "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
       description:
@@ -80,8 +96,8 @@ function ContentProglat() {
     },
     {
       id: 9,
-      title: "Training Konsultan K3",
-      category: "Training",
+      title: "Tenaga Kerja Bangunan Tingkat Tinggi 2",
+      category: "Pekerjaan-Pada-Ketinggian",
       image:
         "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
       description:
@@ -89,8 +105,8 @@ function ContentProglat() {
     },
     {
       id: 10,
-      title: "Training Konsultan K3",
-      category: "Training",
+      title: "Tenaga Kerja Pada Ketinggian Tingkat 1",
+      category: "Pekerjaan-Pada-Ketinggian",
       image:
         "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
       description:
@@ -98,8 +114,8 @@ function ContentProglat() {
     },
     {
       id: 11,
-      title: "Training Konsultan K3",
-      category: "Training",
+      title: "Tenaga Kerja Pada Ketinggian Tingat 2",
+      category: "Pekerjaan-Pada-Ketinggian",
       image:
         "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
       description:
@@ -107,8 +123,8 @@ function ContentProglat() {
     },
     {
       id: 12,
-      title: "Training Konsultan K3",
-      category: "Training",
+      title: "Petugas P3K di Tempat Kerja",
+      category: "Kesehatan-Kerja",
       image:
         "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
       description:
@@ -116,8 +132,8 @@ function ContentProglat() {
     },
     {
       id: 13,
-      title: "Training Konsultan K3",
-      category: "Training",
+      title: "Hyperkes Untuk Paramedis",
+      category: "Kesehatan-Kerja",
       image:
         "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
       description:
@@ -125,8 +141,8 @@ function ContentProglat() {
     },
     {
       id: 14,
-      title: "Training Konsultan K3",
-      category: "Training",
+      title: "Hyperkes Untuk Dokter",
+      category: "Kesehatan-Kerja",
       image:
         "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
       description:
@@ -134,8 +150,8 @@ function ContentProglat() {
     },
     {
       id: 15,
-      title: "Training Konsultan K3",
-      category: "Training",
+      title: "K3 Rumah Sakit",
+      category: "Kesehatan-Kerja",
       image:
         "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
       description:
@@ -143,8 +159,8 @@ function ContentProglat() {
     },
     {
       id: 16,
-      title: "Training Konsultan K3",
-      category: "Training",
+      title: "Ahli K3 Listrik",
+      category: "Listrik",
       image:
         "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
       description:
@@ -152,8 +168,8 @@ function ContentProglat() {
     },
     {
       id: 17,
-      title: "Training Konsultan K3",
-      category: "Training",
+      title: "Teknisi Listrik",
+      category: "Listrik",
       image:
         "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
       description:
@@ -161,8 +177,8 @@ function ContentProglat() {
     },
     {
       id: 18,
-      title: "Training Konsultan K3",
-      category: "Training",
+      title: "Ahli K3 Elevator dan Eskalator",
+      category: "Elevator-dan-Eskalator",
       image:
         "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
       description:
@@ -170,8 +186,8 @@ function ContentProglat() {
     },
     {
       id: 19,
-      title: "Training Konsultan K3",
-      category: "Training",
+      title: "Teknisi Elevator dan Eskalator",
+      category: "Elevator-dan-Eskalator",
       image:
         "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
       description:
@@ -179,8 +195,8 @@ function ContentProglat() {
     },
     {
       id: 20,
-      title: "Training Konsultan K3",
-      category: "Training",
+      title: "Operator Elevator dan Eskalator",
+      category: "Elevator-dan-Eskalator",
       image:
         "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
       description:
@@ -188,8 +204,350 @@ function ContentProglat() {
     },
     {
       id: 21,
-      title: "Training Konsultan K3",
-      category: "Training",
+      title: "Ahli K3 Spesialis Kebakaran Tingkat A",
+      category: "Penanggulangan-Kebakaran",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+    {
+      id: 22,
+      title: "Petugas (Koordinator) Kebakaran Tingkat B",
+      category: "Penanggulangan-Kebakaran",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+    {
+      id: 23,
+      title: "Petugas (Regu) Kebakaran Tingkat C",
+      category: "Penanggulangan-Kebakaran",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+    {
+      id: 24,
+      title: "Petugas (Peran) Kebakaran Tingkat D",
+      category: "Penanggulangan-Kebakaran",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+    {
+      id: 25,
+      title: "Ahli K3 Madya Konstruksi",
+      category: "Konstruksi-dan-Bangunan",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+    {
+      id: 26,
+      title: "Ahli K3 Muda Konstruksi",
+      category: "Konstruksi-dan-Bangunan",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+    {
+      id: 27,
+      title: "Supervisi Perancah",
+      category: "Konstruksi-dan-Bangunan",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+    {
+      id: 28,
+      title: "Teknisi Perancah",
+      category: "Konstruksi-dan-Bangunan",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+    {
+      id: 29,
+      title: "Ahli K3 Pesawat Angkat dan Pesawat Angkut",
+      category: "Pesawat-Angkat-dan-Pesawat-Angkut",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+    {
+      id: 30,
+      title: "Teknisi Pesawat Angkat dan Pesawat Angkut",
+      category: "Pesawat-Angkat-dan-Pesawat-Angkut",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+    {
+      id: 31,
+      title: "Operator Overhead Crane Kelas 1",
+      category: "Pesawat-Angkat-dan-Pesawat-Angkut",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+    {
+      id: 32,
+      title: "Operator Overhead Crane Kelas 2",
+      category: "Pesawat-Angkat-dan-Pesawat-Angkut",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+    {
+      id: 33,
+      title: "Operator Overhead Crane Kelas 3",
+      category: "Pesawat-Angkat-dan-Pesawat-Angkut",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+    {
+      id: 34,
+      title: "Operator Forklift Kelas 1",
+      category: "Pesawat-Angkat-dan-Pesawat-Angkut",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+    {
+      id: 35,
+      title: "Operator Forklift Kelas 2",
+      category: "Pesawat-Angkat-dan-Pesawat-Angkut",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+    {
+      id: 36,
+      title: "Operator Alat Berat",
+      category: "Pesawat-Angkat-dan-Pesawat-Angkut",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+    {
+      id: 37,
+      title: "Juru Ikat (Ringger), Pita Transport(Conveyor)",
+      category: "Pesawat-Angkat-dan-Pesawat-Angkut",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+    {
+      id: 38,
+      title: "Operator Gondala",
+      category: "Pesawat-Angkat-dan-Pesawat-Angkut",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+     {
+      id: 39,
+      title: "Ahli K3 Pesawat Tenaga dan Produksi",
+      category: "Pesawat-Tenaga-dan-Produksi",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+     {
+      id: 40,
+      title: "Teknisi Pesawat Tenaga dan Produksi",
+      category: "Pesawat-Tenaga-dan-Produksi",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+     {
+      id: 41,
+      title: "Operator Penggerak Mula (Motor Diesel, Turbin)",
+      category: "Pesawat-Tenaga-dan-Produksi",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+     {
+      id: 42,
+      title: "Operator Mesin Produksi dan Perkakas Kelas 1",
+      category: "Pesawat-Tenaga-dan-Produksi",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+     {
+      id: 43,
+      title: "Operator Mesin Produksi dan Perkakas Kelas 2",
+      category: "Pesawat-Tenaga-dan-Produksi",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+     {
+      id: 44,
+      title: "Operator Tanur Kelas 1",
+      category: "Pesawat-Tenaga-dan-Produksi",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+     {
+      id: 45,
+      title: "Operator Tanur Kelas 2",
+      category: "Pesawat-Tenaga-dan-Produksi",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+     {
+      id: 46,
+      title: "Ahli K3 Pesawat Uap Bejana dan Tekan",
+      category: "Pesawat-Uap,Bejana-Tekan-dan-Tangki-Timbun",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+     {
+      id: 47,
+      title: "Teknisi Pesawat Uap",
+      category: "Pesawat-Uap,Bejana-Tekan-dan-Tangki-Timbun",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+     {
+      id: 48,
+      title: "Teknisi Tangki Timbun dan Bejana Tekan",
+      category: "Pesawat-Uap,Bejana-Tekan-dan-Tangki-Timbun",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+     {
+      id: 49,
+      title: "Operator Boiler Kelas 1",
+      category: "Pesawat-Uap,Bejana-Tekan-dan-Tangki-Timbun",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+     {
+      id: 50,
+      title: "Operator Boiler Kelas 2",
+      category: "Pesawat-Uap,Bejana-Tekan-dan-Tangki-Timbun",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+     {
+      id: 51,
+      title: "Juru Las GTAW/GMAW Kelas 1",
+      category: "Pengelasan",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+     {
+      id: 52,
+      title: "Juru Las GTAW/GMAW Kelas 2",
+      category: "Pengelasan",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+     {
+      id: 53,
+      title: "Juru Las GTAW/GMAW Kelas 3",
+      category: "Pengelasan",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+    {
+      id: 54,
+      title: "Juru Las Listrik/SMAW Kelas 1",
+      category: "Pengelasan",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+    {
+      id: 55,
+      title: "Juru Las Listrik/SMAW Kelas 2",
+      category: "Pengelasan",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+    {
+      id: 56,
+      title: "Juru Las Listrik/SMAW Kelas 3",
+      category: "Pengelasan",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+    {
+      id: 57,
+      title: "Juru Las Kombinasi GMAW/SMAW Kelas 1",
+      category: "Pengelasan",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+    {
+      id: 58,
+      title: "Juru Las Kombinasi GMAW/SMAW Kelas 2",
+      category: "Pengelasan",
+      image:
+        "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
+      description:
+        "Pelatihan dan konsultasi mendalam mengenai penerapan sistem manajemen keselamatan serta audit di perusahaan.",
+    },
+    {
+      id: 59,
+      title: "Juru Las Kombinasi GMAW/SMAW Kelas 3",
+      category: "Pengelasan",
       image:
         "https://images.unsplash.com/photo-1542744094-3a31246263d0?auto=format&fit=crop&w=600&q=80",
       description:
@@ -213,6 +571,14 @@ function ContentProglat() {
   };
 
   return (
+    <>
+    {selectedProgram && (
+  <FormPendaftaran
+    program={selectedProgram}
+    onSubmit={handleSubmitPendaftaran}
+    onClose={() => setSelectedProgram(null)}
+  />
+)}
     <div className="container mt-4 mb-5">
       <h3 className="mb-3 fw-bold">Daftar Pelayanan & Training</h3>
 
@@ -224,7 +590,7 @@ function ContentProglat() {
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          Kategori: {selectedCategory}
+          Bidang :{selectedCategory}
         </button>
         <ul className="dropdown-menu">
           <li>
@@ -240,27 +606,117 @@ function ContentProglat() {
             <button
               className="dropdown-item"
               type="button"
-              onClick={() => setSelectedCategory("Sertifikasi")}
+              onClick={() => setSelectedCategory("Keahlian-K3-Umum")}
             >
-              Sertifikasi
+              Keahlian K3 Umum
             </button>
           </li>
           <li>
             <button
               className="dropdown-item"
               type="button"
-              onClick={() => setSelectedCategory("Training")}
+              onClick={() => setSelectedCategory("Sistem-Managemen-K3-(SMK3)")}
             >
-              Training
+              Sistem Managemen K3 (SMK3)
             </button>
           </li>
           <li>
             <button
               className="dropdown-item"
               type="button"
-              onClick={() => setSelectedCategory("Event")}
+              onClick={() => setSelectedCategory("Ergonomi-Lingkungan-Kerja-dan-Bahan-Berbahaya")}
             >
-              Event
+              Ergonomi Lingkungan Kerja dan Bahan Berbahaya
+            </button>
+          </li>
+          <li>
+            <button
+              className="dropdown-item"
+              type="button"
+              onClick={() => setSelectedCategory("Pekerjaan-Pada-Ketinggian")}
+            >
+              Pekerjaan Pada Ketinggian
+            </button>
+          </li>
+          <li>
+            <button
+              className="dropdown-item"
+              type="button"
+              onClick={() => setSelectedCategory("Kesehatan-Kerja")}
+            >
+              Kesehatan Kerja
+            </button>
+          </li>
+          <li>
+            <button
+              className="dropdown-item"
+              type="button"
+              onClick={() => setSelectedCategory("Listrik")}
+            >
+              Listrik
+            </button>
+          </li>
+          <li>
+            <button
+              className="dropdown-item"
+              type="button"
+              onClick={() => setSelectedCategory("Elevator-dan-Eskalator")}
+            >
+              Elevatro dan Eskalator
+            </button>
+          </li>
+          <li>
+            <button
+              className="dropdown-item"
+              type="button"
+              onClick={() => setSelectedCategory("Penanggulangan-Kebakaran")}
+            >
+              Penanggulangan Kebakaran
+            </button>
+          </li>
+          <li>
+            <button
+              className="dropdown-item"
+              type="button"
+              onClick={() => setSelectedCategory("Konstruksi-dan-Bangunan")}
+            >
+              Konstruksi dan Bangunan
+            </button>
+          </li>
+          <li>
+            <button
+              className="dropdown-item"
+              type="button"
+              onClick={() => setSelectedCategory("Pesawat-Angkat-dan-Pesawat-Angkut")}
+            >
+              Pesawat Angkat dan Pesawat Angkut
+            </button>
+          </li>
+          <li>
+            <button
+              className="dropdown-item"
+              type="button"
+              onClick={() => setSelectedCategory("Pesawat-Tenaga-dan-Produksi")}
+            >
+              Pesawat Tenaga dan Produksi
+            </button>
+          </li>
+          <li>
+            <button
+              className="dropdown-item"
+              type="button"
+              onClick={() => setSelectedCategory("Pesawat-Uap,Bejana-Tekan-dan-Tangki-Timbun")}
+            >
+              Pesawat Uap,Bejana Tekan dan Tangki Timbun
+            </button>
+          </li>
+          <li>
+            <button
+              className="dropdown-item"
+              type="button"
+              onClick={() => setSelectedCategory("Pengelasan")}
+            >
+              Pengelasan
             </button>
           </li>
         </ul>
@@ -319,6 +775,7 @@ function ContentProglat() {
                         e.currentTarget.style.transform = "translateY(0)";
                         e.currentTarget.style.boxShadow = "none";
                       }}
+                      onClick={() => setSelectedProgram(item)}
                     >
                       <small>Lihat Detail</small>
                     </button>
@@ -364,6 +821,7 @@ function ContentProglat() {
         </div>
       )}
     </div>
+    </>
   );
 }
 
