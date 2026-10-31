@@ -48,19 +48,16 @@ function DetailPelatihan() {
             <div className="detail-information">
 
               <div className="detail-information-item">
-                <div className="detail-icon">▣</div>
-                <h5>Harga</h5>
+                <h5>Biaya</h5>
                 <p>{harga}</p>
               </div>
 
               <div className="detail-information-item">
-                <div className="detail-icon">▦</div>
                 <h5>Durasi</h5>
                 <p>{pelatihan.duration || "Belum ditentukan"}</p>
               </div>
 
               <div className="detail-information-item">
-                <div className="detail-icon">♙</div>
                 <h5>Instruktur</h5>
                 <p>{pelatihan.instructor || "Belum ditentukan"}</p>
               </div>
