@@ -1,0 +1,77 @@
+.footer-custom{
+    display: flex;
+    min-height: 170px;
+    background-color: #aab6ac;
+    align-items: stretch;
+    overflow:hidden ;
+}
+
+/* Bagian kiri footer */
+.footer-left{
+    width: 42%;
+    background-color: #00452f;
+    color: white;
+
+    padding: 35px 30px 30px max(30px, calc((100vw - 870px)/2));
+
+    border-radius: 0 100px  100px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-left h5 {
+    font-size:  20px;
+    margin-bottom: 8px;
+}
+
+.footer-left p{
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Bagian kanan footer */
+.footer-right{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-links{
+    display: flex;
+    gap: 20px;
+}
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #d6b45c;
+}
+
+/* Tampilan HP */
+@media (max-width: 768px) {
+  .footer-custom {
+    flex-direction: column;
+  }
+
+  .footer-left {
+    width: 100%;
+    padding: 30px 20px;
+    border-radius: 0 0 50px 0;
+  }
+
+  .footer-right {
+    padding: 25px 15px;
+  }
+
+  .footer-links {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

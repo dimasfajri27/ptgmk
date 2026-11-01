@@ -1,49 +1,127 @@
-// function About() {
-//     return(
-//         <section id = "about" className="py-5">
-//             <div className="container">
-//                 <div className="row align-items-center g-5">
-//                     {/*Kotak sebelah iri di section About */}
-//                     <div className="col-lg-6">
-//                         <div className="about-image">
-//                             <i className="bi bi-people display-1 text-primary"></i>
-//                                 <h4 className="fw-bold mt-3">
-//                                     Profesional Team
-//                                 </h4>
-//                                 <p className="text-secondary">
-//                                     Tim berpengalaman yang siap membantu
-//                                     kebutuhan digital Anda
-//                                 </p>
-//                         </div>
-//                     </div>
-//                     {/*Kotak kanan di section About */}
-//                     <div className="col-lg-6">
-//                         <span className="text-primary fw-semibold">
-//                             TENTANG KAMI
-//                         </span>
-//                         <h2 className="display-6 fw-bold mt-2 mb-4">
-//                             Patner Digital untuk Pertumbuhan Bisnis
-//                         </h2>
-//                         <p className="text-secondary">
-//                             Kami menggabungkan teknologi,desain, dan pemahaman
-//                             terhadap kebutuhan bisnis untuk menghasilkan solusi yang
-//                             tepat guna
-//                         </p>
-//                         <div className="row mt-4">
-//                             <div className="col-6">
-//                                 <h3 className="fw-bold text-primary">10+</h3>
-//                                 <p className="text-secondary">Tahun Pengalaman</p>
-//                             </div>
-//                             <div className="col-6">
-//                                 <h3 className="fw-bold text-primary">100+</h3>
-//                                 <p className="text-secondary">Project Selesai</p>
-//                             </div>
-//                         </div>
-//                     </div>
-//                 </div>
-//                 </div>
-//         </section>
-//     )
-// }
 
-// export default About;
+import "./About.css";
+
+function About() {
+  return (
+    <div className="about-page">
+
+      {/* HEADER ABOUT */}
+      <section className="about-header">
+        <h1>Tentang Kami</h1>
+        <p>PT. Geo Mandiri Kreasi</p>
+        <span>Consultant, Training & Inspection</span>
+      </section>
+
+      {/* VISI MISI */}
+      <section className="vision-mission">
+        <div className="section-title">
+          <h2>Visi & Misi</h2>
+          <p>
+            Komitmen kami dalam memberikan
+            pelayanan terbaik dan profesional.
+          </p>
+        </div>
+
+        <div className="vm-container">
+
+          {/* VISI */}
+          <div className="vm-card">
+            <div className="vm-icon">◎</div>
+            <h3>Visi</h3>
+            <p>
+              Menjadi perusahaan konsultan,
+              pelatihan, dan inspeksi yang
+              profesional, terpercaya, serta
+              unggul dalam bidang keselamatan
+              dan kesehatan kerja.
+            </p>
+          </div>
+
+          {/* MISI */}
+          <div className="vm-card">
+            <div className="vm-icon">✦</div>
+            <h3>Misi</h3>
+            <ul>
+              <li>
+                Memberikan pelayanan konsultasi
+                dan inspeksi secara profesional.
+              </li>
+              <li>
+                Menyelenggarakan pelatihan
+                berkualitas dan kompeten.
+              </li>
+              <li>
+                Meningkatkan kesadaran keselamatan
+                dan kesehatan kerja.
+              </li>
+              <li>
+                Mengutamakan kepuasan dan
+                kepercayaan pelanggan.
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      {/* LOKASI KANTOR */}
+      <section className="location-section">
+
+        <div className="location-info">
+          <span className="location-label">
+            OUR LOCATION
+          </span>
+
+          <h2>Lokasi Kantor Kami</h2>
+
+          <p>
+            Kami siap memberikan pelayanan terbaik
+            untuk kebutuhan konsultasi, training,
+            dan inspection.
+          </p>
+
+          <div className="address-info">
+            <span>📍</span>
+
+            <div>
+              <h4>PT. Geo Mandiri Kreasi</h4>
+
+              <p>
+                JL. Raya Jatiwaringin, Rukan Kaca Hijau
+                No. 6-C, Pangkalan Jati, RT.2/RW.13,
+                Cipinang Melayu, Kec. Makasar,
+                Kota Jakarta Timur, DKI Jakarta 13620.
+              </p>
+            </div>
+          </div>
+
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=JL.+Raya+Jatiwaringin%2C+Rukan+Kaca+Hijau+No.+6-C%2C+Cipinang+Melayu%2C+Jakarta+Timur+13620"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="maps-button"
+          >
+            Lihat Petunjuk Arah →
+          </a>
+        </div>
+
+        <div className="location-map">
+          <iframe
+            title="Lokasi PT. Geo Mandiri Kreasi"
+            src="https://maps.google.com/maps?q=JL.%20Raya%20Jatiwaringin%2C%20Rukan%20Kaca%20Hijau%20No.%206-C%2C%20Pangkalan%20Jati%2C%20Cipinang%20Melayu%2C%20Jakarta%20Timur%2013620&t=&z=16&ie=UTF8&iwloc=&output=embed"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+
+      </section>
+
+    </div>
+  );
+}
+
+export default About;

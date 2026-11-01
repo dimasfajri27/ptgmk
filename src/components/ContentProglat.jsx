@@ -178,7 +178,7 @@ function ContentProglat() {
               <button
                 className="dropdown-item"
                 type="button"
-                onClick={() => handleCategoryChange("Pesawat-Uap,Bejana-Tekan-dan-Tangki-Timbun")}
+                onClick={() => handleCategoryChange("Pesawat-Uap-Bejana-Tekan-dan-Tangki-Timbun")}
               >
                 Pesawat Uap, Bejana Tekan dan Tangki Timbun
               </button>
