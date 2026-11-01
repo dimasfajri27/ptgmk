@@ -1,14 +1,59 @@
 import carousel5 from "../assets/carousel5.png"
+import auditorsmk3 from "../assets/auditor-smk3.png"
+import k3ahlikimia from "../assets/kk3ahlikimia.png"
+import petugask3kimia from "../assets/pelatihan-petugas-k3-kimia.png"
+import k3ahlimudalingkungan from "../assets/k3ahlimudalingkungan.png"
+import k3teknisiruangterbatas from "../assets/k3teknisiruangterbatas.png"
+import petugask3penyelamat from "../assets/petugask3penyelamat.png"
+import k3tenisideteksigas from "../assets/k3tekinsideteksigas.png"
+import k3ketinggiantingkat2 from "../assets/k3ketinggiantingkat2.png"
+import k3tenagakerjaketinggian1 from "../assets/k3tenagakerjaketinggian1.png"
+import k3bangunantingkattinggi2 from "../assets/k3bangunantingkattinggi2.png"
+import tempatp3kditempatkerja from "../assets/tempatp3kditempatkerja.png"
+import hyperkesuntukparamedis from "../assets/hyperkesuntukparamamedis.png"
+import hyperkesuntukdokter from "../assets/hyperkesuntukdokter.png"
+import k3dirumahsakit from "../assets/k3dirumahsait.png"
+import ahlik3listrik from "../assets/k3ahlilistrik.png"
+import teknisilistrik from "../assets/teknisilistrik.png"
+import k3ahlielevatordaneskalator from "../assets/k3ahlieelevatordaneskalator.png"
+import teknisielevatordaneskalator from "../assets/teknisielevatordaneskalator.png"
+import ahlik3spesialiskebakarantingkatA from "../assets/ahlik3spesialiskebakarantingkatA.png"
+import petugaskoordinatorkebakarantingkatB from "../assets/petugas(koordinatorkebakarantingkatB.png"
+import petugasregukebakarantingkatC from "../assets/petugasregukeebakarantingkatC.png"
+import petugasperankebakarantingkatD from "../assets/petugasperankeebakarantingkatD.png"
+import k3madyakonstruksi from "../assets/k3mdayakontruksi.png"
+import ahlik3mudakontruksi from "../assets/ahlik3mudakontruksi.png"
+import supervisiperancah from "../assets/supervisiperancah.png"
+import ahlik3pesawatangkatdanangkut from "../assets/ahlikk3pesawatangkkatdanangkut.png"
+import teknisipesawatangkatdanangkut from "../assets/teknisipesawatangkatdanangkut.png"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const ProgramPelatihan = [
 
   // 1. KEAHLIAN K3 UMUM
   {
     id: 1,
     title: "Ahli K3 Umum",
-    category: "Keahlian-K3-Umum",
+    category: "Keahlian K3 Umum",
     image: carousel5,
-    description:
-      "Pelatihan Ahli K3 Umum membekali peserta dengan kompetensi dalam menerapkan keselamatan dan kesehatan kerja di perusahaan. Materi meliputi identifikasi bahaya, penilaian risiko, pencegahan kecelakaan, peraturan K3, serta pengawasan keselamatan kerja.",
+    description: "Membekali peserta kompetensi penerapan K3 di perusahaan melalui identifikasi bahaya, penilaian risiko, pencegahan kecelakaan, dan regulasi K3.",
     price: "Rp8.500.000",
     duration: "12 Hari",
     instructor: "Kemnaker",
@@ -18,10 +63,9 @@ const ProgramPelatihan = [
   {
     id: 2,
     title: "Auditor SMK3",
-    category: "Sistem-Managemen-K3-(SMK3)",
-    image: "",
-    description:
-      "Pelatihan Auditor SMK3 membekali peserta dengan kemampuan melakukan audit penerapan Sistem Manajemen K3. Materi meliputi perencanaan audit, pemeriksaan dokumen, pengumpulan bukti, identifikasi ketidaksesuaian, dan penyusunan laporan audit.",
+    category: "Sistem Managemen K3 (SMK3)",
+    image: auditorsmk3,
+    description: "Melatih kemampuan audit penerapan Sistem Manajemen K3, pemeriksaan dokumen, pengumpulan bukti, hingga penyusunan laporan audit.",
     price: "Rp8.000.000",
     duration: "5 Hari",
     instructor: "Kemnaker",
@@ -31,10 +75,9 @@ const ProgramPelatihan = [
   {
     id: 3,
     title: "Ahli K3 Kimia",
-    category: "Ergonomi-Lingkungan-Kerja-dan-Bahan-Berbahaya",
-    image: "",
-    description:
-      "Pelatihan Ahli K3 Kimia memberikan kompetensi dalam mengidentifikasi, mengevaluasi, dan mengendalikan bahaya bahan kimia di tempat kerja. Materi meliputi karakteristik bahan kimia, pengendalian paparan, penyimpanan bahan berbahaya, serta penanganan keadaan darurat.",
+    category: "Ergonomi Lingkungan Kerja dan Bahan Berbahaya",
+    image: k3ahlikimia,
+    description: "Kompetensi mengendalikan bahaya bahan kimia, pengendalian paparan, penyimpanan bahan berbahaya, dan penanganan darurat.",
     price: "Rp12.500.000",
     duration: "12 Hari",
     instructor: "Kemnaker",
@@ -42,10 +85,9 @@ const ProgramPelatihan = [
   {
     id: 4,
     title: "Petugas K3 Kimia",
-    category: "Ergonomi-Lingkungan-Kerja-dan-Bahan-Berbahaya",
-    image: "",
-    description:
-      "Pelatihan Petugas K3 Kimia membekali peserta dengan keterampilan dalam menangani dan mengawasi penggunaan bahan kimia di tempat kerja. Materi mencakup identifikasi bahaya, penggunaan APD, penyimpanan bahan kimia, penanganan tumpahan, dan prosedur tanggap darurat.",
+    category: "Ergonomi Lingkungan Kerja dan Bahan Berbahaya",
+    image: petugask3kimia,
+    description: "Keterampilan menangani bahan kimia, penggunaan APD, penyimpanan, penanganan tumpahan, dan prosedur tanggap darurat.",
     price: "Rp8.500.000",
     duration: "6 Hari",
     instructor: "Kemnaker",
@@ -53,10 +95,9 @@ const ProgramPelatihan = [
   {
     id: 5,
     title: "Ahli K3 Muda Lingkungan",
-    category: "Ergonomi-Lingkungan-Kerja-dan-Bahan-Berbahaya",
-    image: "",
-    description:
-      "Pelatihan Ahli K3 Muda Lingkungan memberikan pemahaman mengenai identifikasi dan pengendalian faktor lingkungan kerja. Peserta akan mempelajari pengenalan bahaya lingkungan, pengukuran faktor fisik dan kimia, evaluasi kondisi lingkungan, serta pengendalian risiko kesehatan kerja.",
+    category: "Ergonomi Lingkungan Kerja dan Bahan Berbahaya",
+    image: k3ahlimudalingkungan,
+    description: "Pemahaman identifikasi dan pengendalian faktor lingkungan kerja, pengukuran fisik-kimia, serta evaluasi risiko kesehatan.",
     price: "Rp12.000.000",
     duration: "7 Hari",
     instructor: "Kemnaker",
@@ -64,10 +105,9 @@ const ProgramPelatihan = [
   {
     id: 6,
     title: "Teknisi Ruang Terbatas",
-    category: "Ergonomi-Lingkungan-Kerja-dan-Bahan-Berbahaya",
-    image: "",
-    description:
-      "Pelatihan Teknisi Ruang Terbatas memberikan keterampilan dalam melaksanakan pekerjaan di ruang terbatas secara aman. Materi meliputi identifikasi bahaya, pemeriksaan atmosfer, penggunaan APD, prosedur izin kerja, serta teknik penyelamatan dalam keadaan darurat.",
+    category: "Ergonomi Lingkungan Kerja dan Bahan Berbahaya",
+    image: k3teknisiruangterbatas,
+    description: "Keterampilan kerja aman di ruang terbatas meliputi pemeriksaan atmosfer, izin kerja, dan teknik penyelamatan darurat.",
     price: "Rp8.500.000",
     duration: "5 Hari",
     instructor: "Kemnaker",
@@ -75,10 +115,9 @@ const ProgramPelatihan = [
   {
     id: 7,
     title: "Petugas K3 Penyelamat",
-    category: "Ergonomi-Lingkungan-Kerja-dan-Bahan-Berbahaya",
-    image: "",
-    description:
-      "Pelatihan Petugas K3 Penyelamat membekali peserta dengan kemampuan melakukan tindakan penyelamatan terhadap pekerja dalam kondisi darurat. Materi mencakup teknik evakuasi, penggunaan peralatan penyelamatan, koordinasi tim, serta prosedur penanganan korban.",
+    category: "Ergonomi Lingkungan Kerja dan Bahan Berbahaya",
+    image: petugask3penyelamat,
+    description: "Kemampuan melakukan evakuasi dan tindakan penyelamatan darurat bagi pekerja menggunakan peralatan khusus.",
     price: "Rp7.500.000",
     duration: "3 Hari",
     instructor: "Kemnaker",
@@ -86,24 +125,21 @@ const ProgramPelatihan = [
   {
     id: 8,
     title: "Teknisi K3 Deteksi Gas",
-    category: "Ergonomi-Lingkungan-Kerja-dan-Bahan-Berbahaya",
-    image: "",
-    description:
-      "Pelatihan Teknisi K3 Deteksi Gas memberikan keterampilan dalam memeriksa dan memantau kandungan gas berbahaya di lingkungan kerja. Peserta akan mempelajari penggunaan alat deteksi gas, pengukuran konsentrasi gas, interpretasi hasil pengukuran, dan tindakan pengendalian bahaya.",
+    category: "Ergonomi Lingkungan Kerja dan Bahan Berbahaya",
+    image: k3tenisideteksigas,
+    description: "Keterampilan memeriksa dan memantau kandungan gas berbahaya, interpretasi hasil ukur, serta tindakan pengendalian.",
     price: "Rp7.500.000",
     duration: "3 Hari",
     instructor: "Kemnaker",
   },
 
-  
   // 4. PEKERJAAN PADA KETINGGIAN
   {
     id: 9,
     title: "Tenaga Kerja Bangunan Tingkat Tinggi 2",
-    category: "Pekerjaan-Pada-Ketinggian",
-    image: "",
-    description:
-      "Pelatihan Tenaga Kerja Bangunan Tingkat Tinggi 2 membekali peserta dengan keterampilan melakukan pekerjaan konstruksi pada ketinggian. Materi meliputi penggunaan sistem perlindungan jatuh, pemeriksaan peralatan, teknik akses kerja, dan prosedur penyelamatan.",
+    category: "Pekerjaan Pada Ketinggian",
+    image: k3bangunantingkattinggi2,
+    description: "Keterampilan konstruksi tingkat tinggi meliputi sistem perlindungan jatuh, pemeriksaan alat, dan prosedur penyelamatan.",
     price: "Rp7.500.000",
     duration: "3 Hari",
     instructor: "Kemnaker",
@@ -111,10 +147,9 @@ const ProgramPelatihan = [
   {
     id: 10,
     title: "Tenaga Kerja Pada Ketinggian 1",
-    category: "Pekerjaan-Pada-Ketinggian",
-    image: "",
-    description:
-      "Pelatihan Tenaga Kerja pada Ketinggian 1 memberikan pengetahuan dasar mengenai keselamatan bekerja di area tinggi. Peserta akan mempelajari identifikasi bahaya jatuh, penggunaan APD, pemeriksaan perlengkapan keselamatan, dan prosedur kerja aman.",
+    category: "Pekerjaan Pada Ketinggian",
+    image: k3tenagakerjaketinggian1,
+    description: "Pengetahuan dasar keselamatan kerja di ketinggian, identifikasi bahaya jatuh, penggunaan APD, dan prosedur aman.",
     price: "Rp9.000.000",
     duration: "5 Hari",
     instructor: "Kemnaker",
@@ -122,24 +157,21 @@ const ProgramPelatihan = [
   {
     id: 11,
     title: "Tenaga Kerja Pada Ketinggian Tingkat 2",
-    category: "Pekerjaan-Pada-Ketinggian",
-    image: "",
-    description:
-      "Pelatihan Tenaga Kerja pada Ketinggian Tingkat 2 meningkatkan kemampuan peserta dalam melakukan pekerjaan pada ketinggian dengan risiko dan kompleksitas lebih tinggi. Materi meliputi teknik akses, sistem pengamanan, penggunaan peralatan khusus, dan prosedur penyelamatan.",
+    category: "Pekerjaan Pada Ketinggian",
+    image: k3ketinggiantingkat2,
+    description: "Teknik akses lanjutan pada ketinggian dengan tingkat risiko tinggi, sistem pengamanan, dan prosedur penyelamatan.",
     price: "Rp10.000.000",
     duration: "5 Hari",
     instructor: "Kemnaker",
   },
 
-  
   // 5. KESEHATAN KERJA
   {
     id: 12,
     title: "Petugas P3K di Tempat Kerja",
-    category: "Kesehatan-Kerja",
-    image: "",
-    description:
-      "Pelatihan Petugas P3K di Tempat Kerja membekali peserta dengan kemampuan memberikan pertolongan pertama kepada pekerja yang mengalami kecelakaan atau kondisi darurat kesehatan. Materi mencakup penanganan luka, pendarahan, patah tulang, gangguan pernapasan, CPR, dan penggunaan perlengkapan P3K.",
+    category: "Kesehatan Kerja",
+    image: tempatp3kditempatkerja,
+    description: "Kemampuan memberikan pertolongan pertama pada kecelakaan kerja, penanganan luka, CPR, dan penggunaan perlengkapan P3K.",
     price: "Rp7.500.000",
     duration: "3 Hari",
     instructor: "Kemnaker",
@@ -147,10 +179,9 @@ const ProgramPelatihan = [
   {
     id: 13,
     title: "Hyperkes Untuk Paramedis",
-    category: "Kesehatan-Kerja",
-    image: "",
-    description:
-      "Pelatihan Hyperkes untuk Paramedis meningkatkan kompetensi tenaga paramedis dalam memberikan pelayanan kesehatan kerja di perusahaan. Materi meliputi pemeriksaan kesehatan tenaga kerja, pencegahan penyakit akibat kerja, pemantauan kesehatan pekerja, dan penanganan masalah kesehatan di lingkungan industri.",
+    category: "Kesehatan Kerja",
+    image: hyperkesuntukparamedis,
+    description: "Meningkatkan kompetensi paramedis dalam pelayanan kesehatan kerja, pencegahan penyakit akibat kerja, dan pemantauan pekerja.",
     price: "Rp7.500.000",
     duration: "5 Hari",
     instructor: "Kemnaker",
@@ -158,10 +189,9 @@ const ProgramPelatihan = [
   {
     id: 14,
     title: "Hyperkes Untuk Dokter",
-    category: "Kesehatan-Kerja",
-    image: "",
-    description:
-      "Pelatihan Hyperkes untuk Dokter memberikan pemahaman mengenai penerapan ilmu kesehatan kerja di lingkungan perusahaan. Materi mencakup pemeriksaan kesehatan tenaga kerja, diagnosis penyakit akibat kerja, evaluasi faktor risiko kesehatan, serta pengelolaan program kesehatan kerja.",
+    category: "Kesehatan Kerja",
+    image: hyperkesuntukdokter,
+    description: "Penerapan ilmu kesehatan kerja bagi dokter perusahaan, diagnosis penyakit akibat kerja, dan pengelolaan program kesehatan.",
     price: "Rp8.500.000",
     duration: "6 Hari",
     instructor: "Kemnaker",
@@ -169,24 +199,21 @@ const ProgramPelatihan = [
   {
     id: 15,
     title: "K3 Rumah Sakit",
-    category: "Kesehatan-Kerja",
-    image: "",
-    description:
-      "Pelatihan K3 Rumah Sakit meningkatkan pemahaman mengenai penerapan keselamatan dan kesehatan kerja di fasilitas pelayanan kesehatan. Materi meliputi pengendalian risiko biologis, kimia dan fisik, keselamatan pekerja, pengelolaan limbah medis, serta prosedur tanggap darurat.",
+    category: "Kesehatan Kerja",
+    image: k3dirumahsakit,
+    description: "Penerapan K3 di fasilitas kesehatan, pengendalian risiko biologis-medis, pengelolaan limbah, dan tanggap darurat RS.",
     price: "Rp6.500.000",
     duration: "4 Hari",
     instructor: "Kemnaker",
   },
 
-  
   // 6. LISTRIK
   {
     id: 16,
     title: "Ahli K3 Listrik",
     category: "Listrik",
-    image: "",
-    description:
-      "Pelatihan Ahli K3 Listrik membekali peserta dengan kompetensi mengidentifikasi, mengevaluasi, dan mengendalikan bahaya kelistrikan di lingkungan kerja. Materi meliputi instalasi listrik, pengawasan pekerjaan kelistrikan, pencegahan kebakaran listrik, dan perlindungan terhadap sengatan listrik.",
+    image: ahlik3listrik,
+    description: "Kompetensi mengawasi dan mengendalikan bahaya kelistrikan, instalasi listrik, pencegahan kebakaran, dan perlindungan sengatan.",
     price: "Rp20.500.000",
     duration: "18 Hari",
     instructor: "Kemnaker",
@@ -195,23 +222,20 @@ const ProgramPelatihan = [
     id: 17,
     title: "Teknisi Listrik",
     category: "Listrik",
-    image: "",
-    description:
-      "Pelatihan Teknisi Listrik meningkatkan keterampilan peserta dalam melakukan pemeriksaan, pemeliharaan, dan perbaikan instalasi serta peralatan listrik. Materi mencakup prinsip dasar kelistrikan, penggunaan alat ukur, identifikasi kerusakan, dan prosedur keselamatan kerja.",
+    image: teknisilistrik,
+    description: "Keterampilan pemeriksaan, pemeliharaan, dan perbaikan instalasi serta peralatan listrik sesuai standar keselamatan.",
     price: "Rp8.500.000",
     duration: "7 Hari",
     instructor: "Kemnaker",
   },
 
-  
   // 7. ELEVATOR DAN ESKALATOR
   {
     id: 18,
     title: "Ahli K3 Elevator dan Eskalator",
-    category: "Elevator-dan-Eskalator",
-    image: "",
-    description:
-      "Pelatihan Ahli K3 Elevator dan Eskalator membekali peserta dengan kemampuan melakukan pengawasan keselamatan, pemeriksaan, dan evaluasi penggunaan elevator serta eskalator. Materi meliputi sistem kerja peralatan, identifikasi bahaya, standar keselamatan, dan pengendalian risiko.",
+    category: "Elevator dan Eskalator",
+    image: k3ahlielevatordaneskalator,
+    description: "Kemampuan pengawasan keselamatan, pemeriksaan, dan evaluasi operasional elevator serta eskalator.",
     price: "Rp19.500.000",
     duration: "12 Hari",
     instructor: "Kemnaker",
@@ -219,10 +243,9 @@ const ProgramPelatihan = [
   {
     id: 19,
     title: "Teknisi Elevator dan Eskalator",
-    category: "Elevator-dan-Eskalator",
-    image: "",
-    description:
-      "Pelatihan Teknisi Elevator dan Eskalator memberikan keterampilan teknis dalam pemeriksaan, pemeliharaan, dan perbaikan elevator serta eskalator. Peserta akan mempelajari komponen mekanis dan elektris, sistem kontrol, identifikasi gangguan, dan prosedur perawatan aman.",
+    category: "Elevator dan Eskalator",
+    image: teknisielevatordaneskalator,
+    description: "Keterampilan teknis perawatan, perbaikan komponen mekanis-elektris, dan pemeliharaan aman elevator dan eskalator.",
     price: "Rp8.500.000",
     duration: "6 Hari",
     instructor: "Kemnaker",
@@ -230,24 +253,21 @@ const ProgramPelatihan = [
   {
     id: 20,
     title: "Operator Elevator dan Eskalator",
-    category: "Elevator-dan-Eskalator",
-    image: "",
-    description:
-      "Pelatihan Operator Elevator dan Eskalator membekali peserta dengan pengetahuan dan keterampilan mengoperasikan elevator serta eskalator sesuai prosedur keselamatan. Materi meliputi pemeriksaan sebelum pengoperasian, pemantauan kondisi alat, dan penanganan keadaan darurat.",
+    category: "Elevator dan Eskalator",
+    image: teknisielevatordaneskalator,
+    description: "Pengetahuan dan keterampilan mengoperasikan elevator serta eskalator sesuai prosedur keselamatan dan darurat.",
     price: "Rp8.500.000",
     duration: "6 Hari",
     instructor: "Kemnaker",
   },
 
-  
   // 8. PENANGGULANGAN KEBAKARAN
   {
     id: 21,
     title: "Ahli K3 Spesialis Kebakaran Tingkat A",
-    category: "Penanggulangan-Kebakaran",
-    image: "",
-    description:
-      "Pelatihan Ahli K3 Spesialis Kebakaran Tingkat A membekali peserta dengan kemampuan merencanakan, mengelola, dan mengevaluasi sistem pencegahan serta penanggulangan kebakaran. Materi meliputi manajemen kebakaran, identifikasi risiko, sistem proteksi, dan koordinasi keadaan darurat.",
+    category: "Penanggulangan Kebakaran",
+    image: ahlik3spesialiskebakarantingkatA,
+    description: "Kemampuan merencanakan dan mengevaluasi manajemen pencegahan serta penanggulangan kebakaran tingkat lanjut.",
     price: "Rp9.500.000",
     duration: "7 Hari",
     instructor: "Kemnaker",
@@ -255,10 +275,9 @@ const ProgramPelatihan = [
   {
     id: 22,
     title: "Petugas (Koordinator) Kebakaran Tingkat B",
-    category: "Penanggulangan-Kebakaran",
-    image: "",
-    description:
-      "Pelatihan Petugas Koordinator Kebakaran Tingkat B memberikan kemampuan mengoordinasikan petugas pemadam kebakaran di lingkungan perusahaan. Materi mencakup pengorganisasian tim, pengawasan peralatan pemadam, strategi penanggulangan kebakaran, dan koordinasi evakuasi.",
+    category: "Penanggulangan Kebakaran",
+    image: petugaskoordinatorkebakarantingkatB,
+    description: "Kemampuan mengoordinasikan tim pemadam kebakaran, pengawasan alat, strategi pemadaman, dan koordinasi evakuasi.",
     price: "Rp9.500.000",
     duration: "7 Hari",
     instructor: "Kemnaker",
@@ -266,10 +285,9 @@ const ProgramPelatihan = [
   {
     id: 23,
     title: "Petugas (Regu) Kebakaran Tingkat C",
-    category: "Penanggulangan-Kebakaran",
-    image: "",
-    description:
-      "Pelatihan Petugas Regu Kebakaran Tingkat C memberikan keterampilan dalam melaksanakan pemadaman kebakaran bersama tim. Peserta akan mempelajari teknik penggunaan APAR, peralatan pemadam, strategi pemadaman, dan prosedur keselamatan selama penanganan kebakaran.",
+    category: "Penanggulangan Kebakaran",
+    image: petugasregukebakarantingkatC,
+    description: "Keterampilan regu pemadam kebakaran, teknik penggunaan APAR/perlengkapan pemadam, dan strategi pemadaman tim.",
     price: "Rp9.000.000",
     duration: "6 Hari",
     instructor: "Kemnaker",
@@ -277,24 +295,21 @@ const ProgramPelatihan = [
   {
     id: 24,
     title: "Petugas (Peran) Kebakaran Tingkat D",
-    category: "Penanggulangan-Kebakaran",
-    image: "",
-    description:
-      "Pelatihan Petugas Peran Kebakaran Tingkat D memberikan pengetahuan dasar mengenai pencegahan dan penanganan awal kebakaran. Materi meliputi pengenalan sumber api, penggunaan APAR, prosedur pelaporan kebakaran, dan langkah evakuasi darurat.",
+    category: "Penanggulangan Kebakaran",
+    image: petugasperankebakarantingkatD,
+    description: "Pengetahuan dasar pencegahan api, penggunaan APAR, pelaporan awal kebakaran, dan langkah evakuasi darurat.",
     price: "Rp6.000.000",
     duration: "3 Hari",
     instructor: "Kemnaker",
   },
 
-  
   // 9. KONSTRUKSI DAN BANGUNAN
   {
     id: 25,
     title: "Ahli K3 Madya Konstruksi",
-    category: "Konstruksi-dan-Bangunan",
-    image: "",
-    description:
-      "Pelatihan Ahli K3 Madya Konstruksi meningkatkan kemampuan peserta dalam mengelola dan mengawasi penerapan K3 pada proyek konstruksi. Materi meliputi identifikasi bahaya, penilaian risiko, pengendalian kecelakaan, pengawasan pekerjaan, dan evaluasi penerapan K3.",
+    category: "Konstruksi dan Bangunan",
+    image: k3madyakonstruksi,
+    description: "Pengelolaan dan pengawasan penerapan K3 proyek konstruksi skala menengah-atas serta evaluasi risiko kecelakaan.",
     price: "Rp11.500.000",
     duration: "9 Hari",
     instructor: "Kemnaker",
@@ -302,10 +317,9 @@ const ProgramPelatihan = [
   {
     id: 26,
     title: "Ahli K3 Muda Konstruksi",
-    category: "Konstruksi-dan-Bangunan",
-    image: "",
-    description:
-      "Pelatihan Ahli K3 Muda Konstruksi membekali peserta dengan pengetahuan mengenai penerapan keselamatan kerja pada proyek konstruksi. Peserta akan mempelajari identifikasi bahaya, penggunaan APD, prosedur kerja aman, pengawasan aktivitas proyek, dan pencegahan kecelakaan.",
+    category: "Konstruksi dan Bangunan",
+    image: ahlik3mudakontruksi,
+    description: "Pengetahuan dasar K3 proyek konstruksi, identifikasi bahaya, penggunaan APD, dan pengawasan aktivitas kerja aman.",
     price: "Rp9.000.000",
     duration: "7 Hari",
     instructor: "Kemnaker",
@@ -313,10 +327,9 @@ const ProgramPelatihan = [
   {
     id: 27,
     title: "Supervisi Perancah",
-    category: "Konstruksi-dan-Bangunan",
-    image: "",
-    description:
-      "Pelatihan Supervisi Perancah membekali peserta dengan kemampuan mengawasi pemasangan, penggunaan, dan pembongkaran perancah. Materi meliputi pemeriksaan kelayakan perancah, identifikasi bahaya, stabilitas struktur, serta penerapan prosedur keselamatan kerja.",
+    category: "Konstruksi dan Bangunan",
+    image: supervisiperancah,
+    description: "Kemampuan mengawasi pemasangan, kelayakan struktur, penggunaan, hingga pembongkaran perancah (scaffolding).",
     price: "Rp8.500.000",
     duration: "5 Hari",
     instructor: "Kemnaker",
@@ -324,24 +337,21 @@ const ProgramPelatihan = [
   {
     id: 28,
     title: "Teknisi Perancah",
-    category: "Konstruksi-dan-Bangunan",
-    image: "",
-    description:
-      "Pelatihan Teknisi Perancah memberikan keterampilan dalam pemasangan, perubahan, dan pembongkaran perancah sesuai prosedur keselamatan. Peserta akan mempelajari komponen perancah, teknik perakitan, pemeriksaan struktur, dan penggunaan APD.",
+    category: "Konstruksi dan Bangunan",
+    image: supervisiperancah,
+    description: "Keterampilan teknis perakitan, perubahan, dan pembongkaran perancah sesuai standar keselamatan kerja.",
     price: "Rp7.500.000",
     duration: "4 Hari",
     instructor: "Kemnaker",
   },
 
-  
   // 10. PESAWAT ANGKAT DAN PESAWAT ANGKUT
   {
     id: 29,
     title: "Ahli K3 Pesawat Angkat dan Pesawat Angkut",
-    category: "Pesawat-Angkat-dan-Pesawat-Angkut",
-    image: "",
-    description:
-      "Pelatihan Ahli K3 Pesawat Angkat dan Pesawat Angkut membekali peserta dengan kompetensi mengawasi dan mengevaluasi keselamatan penggunaan peralatan angkat dan angkut. Materi meliputi identifikasi bahaya, pemeriksaan kelayakan alat, pengawasan operasional, dan pengendalian risiko.",
+    category: "Pesawat Angkat dan Pesawat Angkut",
+    image: ahlik3pesawatangkatdanangkut,
+    description: "Kompetensi pengawasan keselamatan, kelayakan alat, dan operasional pesawat angkat-angkut (crane, forklift, dll).",
     price: "Rp34.000.000",
     duration: "25 Hari",
     instructor: "Kemnaker",
@@ -349,21 +359,20 @@ const ProgramPelatihan = [
   {
     id: 30,
     title: "Teknisi Pesawat Angkat dan Pesawat Angkut",
-    category: "Pesawat-Angkat-dan-Pesawat-Angkut",
-    image: "",
-    description:
-      "Pelatihan Teknisi Pesawat Angkat dan Pesawat Angkut memberikan keterampilan dalam pemeriksaan, pemeliharaan, serta perbaikan peralatan angkat dan angkut. Materi meliputi komponen mesin, sistem mekanis dan hidrolik, identifikasi kerusakan, dan prosedur perawatan.",
+    category: "Pesawat Angkat dan Pesawat Angkut",
+    image: teknisipesawatangkatdanangkut,
+    description: "Keterampilan pemeriksaan, pemeliharaan, dan perbaikan sistem mekanis/hidrolik pesawat angkat dan angkut.",
     price: "Rp12.100.000",
     duration: "9 Hari",
     instructor: "Kemnaker",
   },
+  // ------------------------------------//
   {
     id: 31,
     title: "Operator Overhead Crane Kelas 1",
-    category: "Pesawat-Angkat-dan-Pesawat-Angkut",
+    category: "Pesawat Angkat dan Pesawat Angkut",
     image: "",
-    description:
-      "Pelatihan Operator Overhead Crane Kelas 1 membekali peserta dengan kompetensi mengoperasikan overhead crane sesuai klasifikasi kelas 1. Materi meliputi teknik pengangkatan beban, pemeriksaan alat, pengendalian pergerakan crane, dan prosedur keselamatan.",
+    description: "Kompetensi pengoperasian overhead crane kelas 1, teknik pengangkatan beban berat, dan pemeriksaan alat.",
     price: "Rp7.500.000",
     duration: "5 Hari",
     instructor: "Kemnaker",
@@ -371,10 +380,9 @@ const ProgramPelatihan = [
   {
     id: 32,
     title: "Operator Overhead Crane Kelas 2",
-    category: "Pesawat-Angkat-dan-Pesawat-Angkut",
+    category: "Pesawat Angkat dan Pesawat Angkut",
     image: "",
-    description:
-      "Pelatihan Operator Overhead Crane Kelas 2 memberikan keterampilan dalam mengoperasikan overhead crane sesuai klasifikasi kelas 2. Peserta akan mempelajari pemeriksaan sebelum penggunaan, teknik pengangkatan dan pemindahan beban, serta pengendalian risiko.",
+    description: "Keterampilan pengoperasian overhead crane kelas 2, teknik pemindahan material, dan pengendalian risiko.",
     price: "Rp6.500.000",
     duration: "4 Hari",
     instructor: "Kemnaker",
@@ -382,10 +390,9 @@ const ProgramPelatihan = [
   {
     id: 33,
     title: "Operator Overhead Crane Kelas 3",
-    category: "Pesawat-Angkat-dan-Pesawat-Angkut",
+    category: "Pesawat Angkat dan Pesawat Angkut",
     image: "",
-    description:
-      "Pelatihan Operator Overhead Crane Kelas 3 memberikan keterampilan dasar dalam mengoperasikan overhead crane sesuai klasifikasi kelas 3. Materi meliputi pengenalan komponen crane, prosedur pengoperasian, pemeriksaan peralatan, dan keselamatan kerja.",
+    description: "Keterampilan dasar pengoperasian komponen crane kelas 3, pemeriksaan awal, dan prosedur kerja aman.",
     price: "Rp5.500.000",
     duration: "3 Hari",
     instructor: "Kemnaker",
@@ -393,10 +400,9 @@ const ProgramPelatihan = [
   {
     id: 34,
     title: "Operator Forklift Kelas 1",
-    category: "Pesawat-Angkat-dan-Pesawat-Angkut",
+    category: "Pesawat Angkat dan Pesawat Angkut",
     image: "",
-    description:
-      "Pelatihan Operator Forklift Kelas 1 membekali peserta dengan kompetensi mengoperasikan forklift sesuai klasifikasi kelas 1. Peserta akan mempelajari teknik mengangkat dan memindahkan beban, pemeriksaan kendaraan, pengendalian forklift, dan prosedur keselamatan.",
+    description: "Kompetensi pengoperasian forklift kelas 1, teknik pindah muatan kapasitas tinggi, dan pemeriksaan kendaraan.",
     price: "Rp6.500.000",
     duration: "4 Hari",
     instructor: "Kemnaker",
@@ -404,10 +410,9 @@ const ProgramPelatihan = [
   {
     id: 35,
     title: "Operator Forklift Kelas 2",
-    category: "Pesawat-Angkat-dan-Pesawat-Angkut",
+    category: "Pesawat Angkat dan Pesawat Angkut",
     image: "",
-    description:
-      "Pelatihan Operator Forklift Kelas 2 memberikan keterampilan mengoperasikan forklift sesuai klasifikasi kelas 2. Materi meliputi pengenalan komponen forklift, teknik pemindahan barang, pemeriksaan sebelum penggunaan, dan pencegahan kecelakaan.",
+    description: "Keterampilan dasar pengoperasian forklift kelas 2, teknik pemindahan barang, dan pencegahan kecelakaan.",
     price: "Rp5.500.000",
     duration: "3 Hari",
     instructor: "Kemnaker",
@@ -415,10 +420,9 @@ const ProgramPelatihan = [
   {
     id: 36,
     title: "Operator Alat Berat",
-    category: "Pesawat-Angkat-dan-Pesawat-Angkut",
+    category: "Pesawat Angkat dan Pesawat Angkut",
     image: "",
-    description:
-      "Pelatihan Operator Alat Berat meningkatkan kemampuan peserta dalam mengoperasikan alat berat yang digunakan pada pekerjaan konstruksi dan industri. Materi meliputi pengenalan alat, pemeriksaan kondisi mesin, teknik pengoperasian, pemindahan material, dan prosedur keselamatan.",
+    description: "Kemampuan mengoperasikan alat berat industri/konstruksi, pemeriksaan mesin, dan teknik pemindahan material.",
     price: "Rp7.000.000",
     duration: "4 Hari",
     instructor: "Kemnaker",
@@ -426,10 +430,9 @@ const ProgramPelatihan = [
   {
     id: 37,
     title: "Juru Ikat (Rigger), Pita Transport (Conveyor)",
-    category: "Pesawat-Angkat-dan-Pesawat-Angkut",
+    category: "Pesawat Angkat dan Pesawat Angkut",
     image: "",
-    description:
-      "Pelatihan Juru Ikat (Rigger) dan Pita Transport (Conveyor) membekali peserta dengan pengetahuan mengenai pengikatan beban dan keselamatan sistem conveyor. Materi mencakup teknik pengikatan dan pengangkatan, pemilihan alat bantu, pemeriksaan sling, dan identifikasi bahaya.",
+    description: "Pengetahuan teknik pengikatan beban (rigger), pemilihan alat bantu angkat, dan keselamatan sistem conveyor.",
     price: "Rp5.500.000",
     duration: "3 Hari",
     instructor: "Kemnaker",
@@ -437,10 +440,9 @@ const ProgramPelatihan = [
   {
     id: 38,
     title: "Operator Gondola",
-    category: "Pesawat-Angkat-dan-Pesawat-Angkut",
+    category: "Pesawat Angkat dan Pesawat Angkut",
     image: "",
-    description:
-      "Pelatihan Operator Gondola memberikan keterampilan dalam mengoperasikan gondola untuk pekerjaan pada gedung bertingkat. Materi meliputi pemeriksaan peralatan, teknik pengoperasian, penggunaan APD, sistem pengamanan, dan prosedur penyelamatan darurat.",
+    description: "Keterampilan pengoperasian gondola untuk gedung bertingkat, sistem pengamanan, APD, dan darurat.",
     price: "Rp6.500.000",
     duration: "3 Hari",
     instructor: "Kemnaker",
@@ -450,10 +452,9 @@ const ProgramPelatihan = [
   {
     id: 39,
     title: "Ahli K3 Pesawat Tenaga dan Produksi",
-    category: "Pesawat-Tenaga-dan-Produksi",
+    category: "Pesawat Tenaga dan Produksi",
     image: "",
-    description:
-      "Pelatihan Ahli K3 Pesawat Tenaga dan Produksi membekali peserta dengan kompetensi mengawasi keselamatan penggunaan mesin dan peralatan produksi. Materi meliputi identifikasi bahaya mekanis, pemeriksaan peralatan, pengendalian risiko, pengawasan operasional, dan penerapan standar K3.",
+    description: "Kompetensi pengawasan keselamatan mesin/peralatan produksi, bahaya mekanis, dan penerapan standar K3.",
     price: "Rp33.500.000",
     duration: "25 Hari",
     instructor: "Kemnaker",
@@ -461,10 +462,9 @@ const ProgramPelatihan = [
   {
     id: 40,
     title: "Teknisi Pesawat Tenaga dan Produksi",
-    category: "Pesawat-Tenaga-dan-Produksi",
+    category: "Pesawat Tenaga dan Produksi",
     image: "",
-    description:
-      "Pelatihan Teknisi Pesawat Tenaga dan Produksi memberikan kemampuan dalam pemeriksaan, pemeliharaan, dan perbaikan mesin tenaga serta peralatan produksi. Materi meliputi komponen mesin, sistem penggerak, identifikasi kerusakan, dan prosedur perawatan.",
+    description: "Kemampuan pemeliharaan, perbaikan, dan identifikasi kerusakan komponen mesin penggerak serta produksi.",
     price: "Rp12.000.000",
     duration: "9 Hari",
     instructor: "Kemnaker",
@@ -472,10 +472,9 @@ const ProgramPelatihan = [
   {
     id: 41,
     title: "Operator Penggerak Mula (Motor Diesel, Turbin)",
-    category: "Pesawat-Tenaga-dan-Produksi",
+    category: "Pesawat Tenaga dan Produksi",
     image: "",
-    description:
-      "Pelatihan Operator Penggerak Mula membekali peserta dengan keterampilan mengoperasikan mesin penggerak seperti motor diesel dan turbin. Materi meliputi prinsip kerja mesin, pemeriksaan sebelum pengoperasian, pemantauan parameter, pemeliharaan, dan keselamatan kerja.",
+    description: "Keterampilan mengoperasikan motor diesel dan turbin, pemantauan parameter mesin, serta pemeliharaan dasar.",
     price: "Rp7.000.000",
     duration: "4 Hari",
     instructor: "Kemnaker",
@@ -483,10 +482,9 @@ const ProgramPelatihan = [
   {
     id: 42,
     title: "Operator Mesin Produksi dan Perkakas Kelas 1",
-    category: "Pesawat-Tenaga-dan-Produksi",
+    category: "Pesawat Tenaga dan Produksi",
     image: "",
-    description:
-      "Pelatihan Operator Mesin Produksi dan Perkakas Kelas 1 membekali peserta dengan kemampuan mengoperasikan mesin produksi sesuai klasifikasi kelas 1. Materi meliputi prinsip kerja mesin, teknik pengoperasian, pemeriksaan peralatan, pengendalian risiko, dan keselamatan produksi.",
+    description: "Kemampuan pengoperasian mesin produksi kelas 1, teknik perkakas, pemeriksaan, dan keselamatan kerja.",
     price: "Rp8.000.000",
     duration: "5 Hari",
     instructor: "Kemnaker",
@@ -494,10 +492,9 @@ const ProgramPelatihan = [
   {
     id: 43,
     title: "Operator Mesin Produksi dan Perkakas Kelas 2",
-    category: "Pesawat-Tenaga-dan-Produksi",
+    category: "Pesawat Tenaga dan Produksi",
     image: "",
-    description:
-      "Pelatihan Operator Mesin Produksi dan Perkakas Kelas 2 memberikan keterampilan mengoperasikan mesin produksi sesuai klasifikasi kelas 2. Materi meliputi pengenalan komponen mesin, prosedur pengoperasian, pemeliharaan dasar, dan pencegahan kecelakaan.",
+    description: "Keterampilan pengoperasian mesin produksi kelas 2, pemeliharaan rutin, dan pencegahan kecelakaan kerja.",
     price: "Rp7.000.000",
     duration: "4 Hari",
     instructor: "Kemnaker",
@@ -505,10 +502,9 @@ const ProgramPelatihan = [
   {
     id: 44,
     title: "Operator Tanur Kelas 1",
-    category: "Pesawat-Tenaga-dan-Produksi",
+    category: "Pesawat Tenaga dan Produksi",
     image: "",
-    description:
-      "Pelatihan Operator Tanur Kelas 1 membekali peserta dengan kemampuan mengoperasikan tanur atau furnace sesuai klasifikasi kelas 1. Materi meliputi prinsip kerja tanur, pengendalian temperatur, pemeriksaan peralatan, pemantauan proses pemanasan, dan keselamatan kerja.",
+    description: "Kompetensi pengoperasian tanur/furnace kelas 1, pengaturan temperatur tinggi, dan pemantauan proses pemanasan.",
     price: "Rp8.000.000",
     duration: "5 Hari",
     instructor: "Kemnaker",
@@ -516,10 +512,9 @@ const ProgramPelatihan = [
   {
     id: 45,
     title: "Operator Tanur Kelas 2",
-    category: "Pesawat-Tenaga-dan-Produksi",
+    category: "Pesawat Tenaga dan Produksi",
     image: "",
-    description:
-      "Pelatihan Operator Tanur Kelas 2 memberikan keterampilan mengoperasikan tanur sesuai klasifikasi kelas 2. Materi mencakup pengenalan sistem tanur, pengaturan temperatur, pemeriksaan peralatan, prosedur operasional, dan pengendalian risiko panas.",
+    description: "Keterampilan pengoperasian tanur kelas 2, kontrol temperatur, prosedur operasional, dan mitigasi risiko panas.",
     price: "Rp7.000.000",
     duration: "4 Hari",
     instructor: "Kemnaker",
@@ -529,10 +524,9 @@ const ProgramPelatihan = [
   {
     id: 46,
     title: "Ahli K3 Pesawat Uap Bejana dan Tekan",
-    category: "Pesawat-Uap-Bejana-Tekan-dan-Tangki-Timbun",
+    category: "Pesawat Uap Bejana Tekan dan Tangki Timbun",
     image: "",
-    description:
-      "Pelatihan Ahli K3 Pesawat Uap dan Bejana Tekan meningkatkan kompetensi peserta dalam mengawasi keselamatan pengoperasian pesawat uap dan bejana tekan. Materi meliputi prinsip kerja peralatan, bahaya tekanan dan temperatur tinggi, pemeriksaan keselamatan, serta pengendalian risiko.",
+    description: "Kompetensi pengawasan keselamatan pesawat uap dan bejana tekan, mitigasi bahaya tekanan/suhu tinggi.",
     price: "Rp33.500.000",
     duration: "25 Hari",
     instructor: "Kemnaker",
@@ -540,10 +534,9 @@ const ProgramPelatihan = [
   {
     id: 47,
     title: "Teknisi Pesawat Uap",
-    category: "Pesawat-Uap-Bejana-Tekan-dan-Tangki-Timbun",
+    category: "Pesawat Uap Bejana Tekan dan Tangki Timbun",
     image: "",
-    description:
-      "Pelatihan Teknisi Pesawat Uap memberikan keterampilan dalam pemeriksaan, pemeliharaan, dan perawatan pesawat uap. Materi mencakup prinsip kerja boiler, komponen utama, sistem pembakaran, pengendalian tekanan, dan prosedur pemeliharaan aman.",
+    description: "Keterampilan pemeriksaan, perawatan boiler/pesawat uap, sistem pembakaran, dan pengendalian tekanan.",
     price: "Rp12.000.000",
     duration: "9 Hari",
     instructor: "Kemnaker",
@@ -551,10 +544,9 @@ const ProgramPelatihan = [
   {
     id: 48,
     title: "Teknisi Tangki Timbun dan Bejana Tekan",
-    category: "Pesawat-Uap-Bejana-Tekan-dan-Tangki-Timbun",
+    category: "Pesawat Uap Bejana Tekan dan Tangki Timbun",
     image: "",
-    description:
-      "Pelatihan Teknisi Tangki Timbun dan Bejana Tekan membekali peserta dengan kemampuan melakukan pemeriksaan dan pemeliharaan tangki timbun serta bejana tekan. Materi meliputi konstruksi peralatan, sistem tekanan, identifikasi kerusakan, pemeriksaan kebocoran, dan keselamatan kerja.",
+    description: "Kemampuan inspeksi tangki timbun dan bejana tekan, deteksi kebocoran, serta pemeliharaan konstruksi.",
     price: "Rp12.000.000",
     duration: "9 Hari",
     instructor: "Kemnaker",
@@ -562,10 +554,9 @@ const ProgramPelatihan = [
   {
     id: 49,
     title: "Operator Boiler Kelas 1",
-    category: "Pesawat-Uap-Bejana-Tekan-dan-Tangki-Timbun",
+    category: "Pesawat Uap Bejana Tekan dan Tangki Timbun",
     image: "",
-    description:
-      "Pelatihan Operator Boiler Kelas 1 membekali peserta dengan kemampuan mengoperasikan boiler sesuai klasifikasi kelas 1. Materi meliputi prinsip kerja boiler, pengendalian tekanan dan temperatur, pemeriksaan komponen, pengelolaan air umpan, dan prosedur keselamatan.",
+    description: "Kompetensi pengoperasian boiler kelas 1, kontrol tekanan-temperatur, dan pengelolaan air umpan boiler.",
     price: "Rp9.000.000",
     duration: "6 Hari",
     instructor: "Kemnaker",
@@ -573,10 +564,9 @@ const ProgramPelatihan = [
   {
     id: 50,
     title: "Operator Boiler Kelas 2",
-    category: "Pesawat-Uap-Bejana-Tekan-dan-Tangki-Timbun",
+    category: "Pesawat Uap Bejana Tekan dan Tangki Timbun",
     image: "",
-    description:
-      "Pelatihan Operator Boiler Kelas 2 memberikan keterampilan dasar dalam mengoperasikan boiler sesuai klasifikasi kelas 2. Peserta akan mempelajari komponen boiler, pemeriksaan sebelum pengoperasian, pengaturan tekanan, pemantauan kondisi mesin, dan prosedur pengoperasian aman.",
+    description: "Keterampilan dasar pengoperasian boiler kelas 2, pemeriksaan awal, dan pemantauan mesin.",
     price: "Rp7.000.000",
     duration: "4 Hari",
     instructor: "Kemnaker",
@@ -588,8 +578,7 @@ const ProgramPelatihan = [
     title: "Juru Las GTAW/GMAW Kelas 1",
     category: "Pengelasan",
     image: "",
-    description:
-      "Pelatihan Juru Las GTAW/GMAW Kelas 1 meningkatkan kompetensi peserta dalam melakukan pengelasan menggunakan metode GTAW dan GMAW sesuai klasifikasi kelas 1. Materi meliputi persiapan material, pengaturan mesin las, teknik pengelasan, pemeriksaan hasil las, dan keselamatan kerja.",
+    description: "Kompetensi pengelasan metode GTAW & GMAW kelas 1, persiapan material, parameter mesin, dan uji hasil las.",
     price: "Rp30.000.000",
     duration: "5 Hari",
     instructor: "Kemnaker",
@@ -599,8 +588,7 @@ const ProgramPelatihan = [
     title: "Juru Las GTAW/GMAW Kelas 2",
     category: "Pengelasan",
     image: "",
-    description:
-      "Pelatihan Juru Las GTAW/GMAW Kelas 2 membekali peserta dengan keterampilan pengelasan menggunakan metode GTAW dan GMAW sesuai klasifikasi kelas 2. Materi mencakup teknik pengelasan, pengaturan parameter mesin, persiapan sambungan, dan pemeriksaan kualitas hasil las.",
+    description: "Keterampilan pengelasan metode GTAW & GMAW kelas 2, teknik penyambungan, dan kontrol kualitas las.",
     price: "Rp25.000.000",
     duration: "5 Hari",
     instructor: "Kemnaker",
@@ -610,8 +598,7 @@ const ProgramPelatihan = [
     title: "Juru Las GTAW/GMAW Kelas 3",
     category: "Pengelasan",
     image: "",
-    description:
-      "Pelatihan Juru Las GTAW/GMAW Kelas 3 memberikan kemampuan teknis dalam melakukan pekerjaan pengelasan sesuai klasifikasi kelas 3. Peserta akan mempelajari pengenalan peralatan, teknik pengelasan, pengendalian kualitas sambungan, dan keselamatan kerja.",
+    description: "Kemampuan dasar pengelasan GTAW & GMAW kelas 3, pengenalan alat, dan standar keselamatan las.",
     price: "Rp24.000.000",
     duration: "5 Hari",
     instructor: "Kemnaker",
@@ -621,8 +608,7 @@ const ProgramPelatihan = [
     title: "Juru Las Listrik / SMAW Kelas 1",
     category: "Pengelasan",
     image: "",
-    description:
-      "Pelatihan Juru Las Listrik SMAW Kelas 1 membekali peserta dengan kompetensi pengelasan menggunakan metode SMAW sesuai klasifikasi kelas 1. Materi meliputi persiapan material, pemilihan elektroda, pengaturan arus listrik, teknik pengelasan, dan pemeriksaan hasil las.",
+    description: "Kompetensi pengelasan listrik SMAW kelas 1, pemilihan elektroda, pengaturan arus, dan pengujian kualitas.",
     price: "Rp25.000.000",
     duration: "5 Hari",
     instructor: "Kemnaker",
@@ -632,8 +618,7 @@ const ProgramPelatihan = [
     title: "Juru Las Listrik / SMAW Kelas 2",
     category: "Pengelasan",
     image: "",
-    description:
-      "Pelatihan Juru Las Listrik SMAW Kelas 2 memberikan keterampilan pengelasan menggunakan metode SMAW sesuai klasifikasi kelas 2. Peserta akan mempelajari teknik pengelasan, pengaturan parameter mesin, persiapan sambungan, pengendalian kualitas, dan keselamatan kerja.",
+    description: "Keterampilan pengelasan SMAW kelas 2, parameter mesin, persiapan sambungan logam, dan keselamatan kerja.",
     price: "Rp24.000.000",
     duration: "5 Hari",
     instructor: "Kemnaker",
@@ -643,8 +628,7 @@ const ProgramPelatihan = [
     title: "Juru Las Listrik / SMAW Kelas 3",
     category: "Pengelasan",
     image: "",
-    description:
-      "Pelatihan Juru Las Listrik SMAW Kelas 3 memberikan pengetahuan dan keterampilan dalam melakukan pengelasan sesuai klasifikasi kelas 3. Materi mencakup pengenalan peralatan, teknik pengelasan, penggunaan elektroda, dan pemeriksaan kualitas sambungan las.",
+    description: "Pengetahuan dan teknik dasar pengelasan SMAW kelas 3 serta pemeriksaan sambungan las.",
     price: "Rp23.000.000",
     duration: "5 Hari",
     instructor: "Kemnaker",
@@ -654,8 +638,7 @@ const ProgramPelatihan = [
     title: "Juru Las Kombinasi GMAW / SMAW Kelas 1",
     category: "Pengelasan",
     image: "",
-    description:
-      "Pelatihan Juru Las Kombinasi GMAW/SMAW Kelas 1 membekali peserta dengan kompetensi melakukan pengelasan menggunakan kombinasi metode GMAW dan SMAW sesuai klasifikasi kelas 1. Materi meliputi persiapan material, pengaturan mesin, teknik pengelasan kombinasi, dan pemeriksaan hasil las.",
+    description: "Kompetensi pengelasan kombinasi GMAW & SMAW kelas 1 untuk berbagai posisi dan material khusus.",
     price: "Rp27.000.000",
     duration: "5 Hari",
     instructor: "Kemnaker",
@@ -665,8 +648,7 @@ const ProgramPelatihan = [
     title: "Juru Las Kombinasi GMAW / SMAW Kelas 2",
     category: "Pengelasan",
     image: "",
-    description:
-      "Pelatihan Juru Las Kombinasi GMAW/SMAW Kelas 2 meningkatkan keterampilan peserta dalam menggunakan metode pengelasan kombinasi sesuai klasifikasi kelas 2. Materi mencakup teknik penyambungan material, pengaturan parameter pengelasan, pengendalian kualitas, dan keselamatan kerja.",
+    description: "Keterampilan pengelasan kombinasi GMAW & SMAW kelas 2, parameter teknik, dan kontrol kualitas sambungan.",
     price: "Rp26.000.000",
     duration: "5 Hari",
     instructor: "Kemnaker",
@@ -676,8 +658,7 @@ const ProgramPelatihan = [
     title: "Juru Las Kombinasi GMAW / SMAW Kelas 3",
     category: "Pengelasan",
     image: "",
-    description:
-      "Pelatihan Juru Las Kombinasi GMAW/SMAW Kelas 3 memberikan pengetahuan dan keterampilan dalam melakukan pengelasan kombinasi sesuai klasifikasi kelas 3. Peserta akan mempelajari penggunaan peralatan, teknik pengelasan, persiapan sambungan, dan pemeriksaan hasil pekerjaan las.",
+    description: "Kemampuan dasar pengelasan kombinasi GMAW & SMAW kelas 3, persiapan sambungan, dan pengecekan hasil.",
     price: "Rp25.000.000",
     duration: "5 Hari",
     instructor: "Kemnaker",

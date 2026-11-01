@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Home from "./components/home";
 import ContentProglat from "./components/ContentProglat";
 import DetailPelatihan from "./pages/DetailPelatihan";
+import About from "./components/about";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             element={
               <>
                 <Home />
+                <About />
                 <ContentProglat />
               </>
             }

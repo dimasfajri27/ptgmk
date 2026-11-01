@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ProgramPelatihan from "../data/ProgramPelatihan";
@@ -7,21 +6,29 @@ function ContentProglat() {
   // State kategori yang dipilih
   const [selectedCategory, setSelectedCategory] = useState("Semua");
 
+  // State untuk input pencarian (Search)
+  const [searchTerm, setSearchTerm] = useState("");
+
   // State untuk menampilkan seluruh card
   const [showAll, setShowAll] = useState(false);
 
   // Mengambil data dari ProgramPelatihan.js
   const items = ProgramPelatihan;
 
-  // Filter data berdasarkan kategori
-  const filteredItems =
-    selectedCategory === "Semua"
-      ? items
-      : items.filter(
-          (item) => item.category === selectedCategory
-        );
+  // 1. Filter data berdasarkan Kategori DAN kata kunci pencarian (Search)
+  const filteredItems = items.filter((item) => {
+    const matchesCategory =
+      selectedCategory === "Semua" || item.category === selectedCategory;
+    
+    // Pencarian berdasarkan judul atau deskripsi pelatihan
+    const matchesSearch =
+      item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.description.toLowerCase().includes(searchTerm.toLowerCase());
 
-  // Membatasi jumlah card maksimal 9
+    return matchesCategory && matchesSearch;
+  });
+
+  // Membatasi jumlah card maksimal 9 jika belum klik "Lihat Lainnya"
   const displayedItems = showAll
     ? filteredItems
     : filteredItems.slice(0, 9);
@@ -37,164 +44,182 @@ function ContentProglat() {
       <div id="program" className="container mt-4 mb-5">
 
         <h3 className="mb-3 fw-bold">
-         Program Pelatihan
+          Program Pelatihan
         </h3>
 
-        {/* Dropdown Filter Kategori */}
-        <div className="dropdown mb-4">
-
-          <button
-            className="btn btn-primary dropdown-toggle"
-            type="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Bidang : {selectedCategory}
-          </button>
-
-          <ul className="dropdown-menu">
-
-            <li>
+        {/* Baris untuk Search Input & Dropdown Kategori */}
+        <div className="row g-3 mb-4 align-items-center">
+          
+          {/* Kolom Search (Menggunakan form yang Anda berikan) */}
+          <div className="col-md-6">
+            <form
+              className="d-flex"
+              role="search"
+              onSubmit={(e) => e.preventDefault()}
+            >
+              <input
+                className="form-control me-2"
+                type="search"
+                placeholder="Cari program pelatihan..."
+                aria-label="Search"
+                value={searchTerm}
+                onChange={(e) => {
+                  setSearchTerm(e.target.value);
+                  setShowAll(false); // Reset tampilan pagination saat mencari
+                }}
+              />
               <button
-                className="dropdown-item"
-                type="button"
-                onClick={() => handleCategoryChange("Semua")}
+                className="btn btn-outline-success"
+                type="submit"
               >
-                Semua
+                Search
               </button>
-            </li>
+            </form>
+          </div>
 
-            <li>
+          {/* Kolom Dropdown Filter Kategori */}
+          <div className="col-md-6 text-md-end">
+            <div className="dropdown d-inline-block">
               <button
-                className="dropdown-item"
+                className="btn btn-primary dropdown-toggle"
                 type="button"
-                onClick={() => handleCategoryChange("Keahlian-K3-Umum")}
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
               >
-                Keahlian K3 Umum
+                Bidang : {selectedCategory}
               </button>
-            </li>
 
-            <li>
-              <button
-                className="dropdown-item"
-                type="button"
-                onClick={() => handleCategoryChange("Sistem-Managemen-K3-(SMK3)")}
-              >
-                Sistem Managemen K3 (SMK3)
-              </button>
-            </li>
+              <ul className="dropdown-menu dropdown-menu-end">
+                <li>
+                  <button
+                    className="dropdown-item"
+                    type="button"
+                    onClick={() => handleCategoryChange("Semua")}
+                  >
+                    Semua
+                  </button>
+                </li>
+                <li>
+                  <button
+                    className="dropdown-item"
+                    type="button"
+                    onClick={() => handleCategoryChange("Keahlian K3 Umum")}
+                  >
+                    Keahlian K3 Umum
+                  </button>
+                </li>
+                <li>
+                  <button
+                    className="dropdown-item"
+                    type="button"
+                    onClick={() => handleCategoryChange("Sistem Managemen K3 (SMK3)")}
+                  >
+                    Sistem Managemen K3 (SMK3)
+                  </button>
+                </li>
+                <li>
+                  <button
+                    className="dropdown-item"
+                    type="button"
+                    onClick={() => handleCategoryChange("Ergonomi Lingkungan Kerja dan Bahan Berbahaya")}
+                  >
+                    Ergonomi Lingkungan Kerja dan Bahan Berbahaya
+                  </button>
+                </li>
+                <li>
+                  <button
+                    className="dropdown-item"
+                    type="button"
+                    onClick={() => handleCategoryChange("Pekerjaan Pada Ketinggian")}
+                  >
+                    Pekerjaan Pada Ketinggian
+                  </button>
+                </li>
+                <li>
+                  <button
+                    className="dropdown-item"
+                    type="button"
+                    onClick={() => handleCategoryChange("Kesehatan Kerja")}
+                  >
+                    Kesehatan Kerja
+                  </button>
+                </li>
+                <li>
+                  <button
+                    className="dropdown-item"
+                    type="button"
+                    onClick={() => handleCategoryChange("Listrik")}
+                  >
+                    Listrik
+                  </button>
+                </li>
+                <li>
+                  <button
+                    className="dropdown-item"
+                    type="button"
+                    onClick={() => handleCategoryChange("Elevator dan Eskalator")}
+                  >
+                    Elevator dan Eskalator
+                  </button>
+                </li>
+                <li>
+                  <button
+                    className="dropdown-item"
+                    type="button"
+                    onClick={() => handleCategoryChange("Penanggulangan Kebakaran")}
+                  >
+                    Penanggulangan Kebakaran
+                  </button>
+                </li>
+                <li>
+                  <button
+                    className="dropdown-item"
+                    type="button"
+                    onClick={() => handleCategoryChange("Konstruksi dan Bangunan")}
+                  >
+                    Konstruksi dan Bangunan
+                  </button>
+                </li>
+                <li>
+                  <button
+                    className="dropdown-item"
+                    type="button"
+                    onClick={() => handleCategoryChange("Pesawat Angkat dan Pesawat Angkut")}
+                  >
+                    Pesawat Angkat dan Pesawat Angkut
+                  </button>
+                </li>
+                <li>
+                  <button
+                    className="dropdown-item"
+                    type="button"
+                    onClick={() => handleCategoryChange("Pesawat Tenaga dan Produksi")}
+                  >
+                    Pesawat Tenaga dan Produksi
+                  </button>
+                </li>
+                <li>
+                  <button
+                    className="dropdown-item"
+                    type="button"
+                    onClick={() => handleCategoryChange("Pesawat Uap,Bejana Tekan dan Tangki Timbun")}
+                  >
+                    Pesawat Uap, Bejana Tekan dan Tangki Timbun
+                  </button>
+                </li>
+                <li>
+                  <button
+                    className="dropdown-item"
+                    type="button"
+                    onClick={() => handleCategoryChange("Pengelasan")}
+                  >
+                    Pengelasan
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-            <li>
-              <button
-                className="dropdown-item"
-                type="button"
-                onClick={() => handleCategoryChange("Ergonomi-Lingkungan-Kerja-dan-Bahan-Berbahaya")}
-              >
-                Ergonomi Lingkungan Kerja dan Bahan Berbahaya
-              </button>
-            </li>
-
-            <li>
-              <button
-                className="dropdown-item"
-                type="button"
-                onClick={() => handleCategoryChange("Pekerjaan-Pada-Ketinggian")}
-              >
-                Pekerjaan Pada Ketinggian
-              </button>
-            </li>
-
-            <li>
-              <button
-                className="dropdown-item"
-                type="button"
-                onClick={() => handleCategoryChange("Kesehatan-Kerja")}
-              >
-                Kesehatan Kerja
-              </button>
-            </li>
-
-            <li>
-              <button
-                className="dropdown-item"
-                type="button"
-                onClick={() => handleCategoryChange("Listrik")}
-              >
-                Listrik
-              </button>
-            </li>
-
-            <li>
-              <button
-                className="dropdown-item"
-                type="button"
-                onClick={() => handleCategoryChange("Elevator-dan-Eskalator")}
-              >
-                Elevator dan Eskalator
-              </button>
-            </li>
-
-            <li>
-              <button
-                className="dropdown-item"
-                type="button"
-                onClick={() => handleCategoryChange("Penanggulangan-Kebakaran")}
-              >
-                Penanggulangan Kebakaran
-              </button>
-            </li>
-
-            <li>
-              <button
-                className="dropdown-item"
-                type="button"
-                onClick={() => handleCategoryChange("Konstruksi-dan-Bangunan")}
-              >
-                Konstruksi dan Bangunan
-              </button>
-            </li>
-
-            <li>
-              <button
-                className="dropdown-item"
-                type="button"
-                onClick={() => handleCategoryChange("Pesawat-Angkat-dan-Pesawat-Angkut")}
-              >
-                Pesawat Angkat dan Pesawat Angkut
-              </button>
-            </li>
-
-            <li>
-              <button
-                className="dropdown-item"
-                type="button"
-                onClick={() => handleCategoryChange("Pesawat-Tenaga-dan-Produksi")}
-              >
-                Pesawat Tenaga dan Produksi
-              </button>
-            </li>
-
-            <li>
-              <button
-                className="dropdown-item"
-                type="button"
-                onClick={() => handleCategoryChange("Pesawat-Uap,Bejana-Tekan-dan-Tangki-Timbun")}
-              >
-                Pesawat Uap, Bejana Tekan dan Tangki Timbun
-              </button>
-            </li>
-
-            <li>
-              <button
-                className="dropdown-item"
-                type="button"
-                onClick={() => handleCategoryChange("Pengelasan")}
-              >
-                Pengelasan
-              </button>
-            </li>
-
-          </ul>
         </div>
 
         {/* Grid Card Pelatihan */}
@@ -287,7 +312,7 @@ function ContentProglat() {
 
             <div className="col-12">
               <div className="alert alert-warning">
-                Tidak ada konten untuk kategori ini.
+                Tidak ada program pelatihan yang sesuai dengan pencarian Anda.
               </div>
             </div>
 
@@ -332,4 +357,5 @@ function ContentProglat() {
   );
 }
 
+File: ContentProglat.jsx
 export default ContentProglat;
