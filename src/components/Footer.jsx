@@ -1,7 +1,8 @@
+import "./Footer.css";
 function Footer() {
     return(
-        <footer className="bg-dark text-white py-4">
-            <div className="container">
+        <footer className= "footer-custom">
+            <div className="footer-left">
                 <div className="row align-itmes-center">
                     <div className="col-md-6">
                         <h5 className="fw-bold">PT. Geo Mandiri Kreasi</h5>
@@ -16,7 +17,8 @@ function Footer() {
                     </div>
                         
                    
-                    <div className="col-md-6 text-md-end mt-3 mt-md-0">
+                    <div className="Footer-right">
+                        <div className="footer-links">
                         <a href="#" className="text-white me-3">
                             <i className="bi bi-facebook"></i>
                         </a>
@@ -27,10 +29,11 @@ function Footer() {
                             <i className="bi bi-linkedin"></i>
                         </a>
                     </div>
+                    </div>
                 </div>
                 <hr className="border-secondary my-4" />
                 <p className="text-center text-white-50 mb-0">
-                    &copy;2026 TechCompany. All Rights Reserved.
+                    &copy;2026 PT. Geo Mandiri Kreasi. All Rights Reserved.
                 </p>
             </div>
         </footer>

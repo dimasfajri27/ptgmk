@@ -1,0 +1,68 @@
+/* Nabvar saat diposisi paling atas */
+.navbar-custom {
+    position: sticky;
+    top: 6px;
+    z-index: 1000;
+
+width: min(870px, calc(100% - 32px));
+margin: 6px auto 0;
+
+/* background transparan  */
+background-color: rgba(220, 235, 220, 0.35) !important;
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+
+
+border:  1px solid rgba(255, 255, 255, 0.35);
+border-radius: 12px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+transition: all 0.3s ease;
+}
+
+/* warna tulisan navbar */
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: #00452f;
+    font-weight: 500;
+}
+
+/* efek ketika mouse diarahkan */
+.navbar-custom .nav-link:hover{
+    color: #c49a36;
+}
+
+
+.navbar-custom.scrolled {
+    background-color: rgba(255,255,255,0.35) !important;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* warna tulisan ketika di-scroll */
+.navbar-custom.scrolled .navbar-brand,
+.navbar-custom.scrolled .nav-link{
+    color: #00452f;
+}
+
+.navbar-custom.scrolled .nav-link:hover{
+    color: #d6b45c;
+}
+
+/* warna tombol menu mobile */
+.navbar-custom .navbar-toggler{
+    border-color: rgba(0, 69, 47, 0.5);
+}
+
+.navbar-custom .navbar-toggler-icon {
+    filter: brightness(0) saturate(100%) invert(20%) sepia(30%)
+    saturate(1200%) hue-rotate(110deg);
+}
+
+.navbar-custom.scrolled .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-custom.scrolled .navbar-toggler-icon{
+    filter:  brightness(0) invert(1);
+}
