@@ -26,7 +26,7 @@ function App() {
             }
           />
 
-          <Route
+          {/* <Route
             path="/home"
             element={
               <>
@@ -34,7 +34,7 @@ function App() {
                 <ContentProglat />
               </>
             }
-          />
+          /> */}
 
           <Route
             path="/pelatihan/:id"
@@ -42,7 +42,7 @@ function App() {
           />
 
           <Route
-            path="/about"
+            path="/about/:id"
             element={<About />}
           />
         </Routes>

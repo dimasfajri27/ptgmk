@@ -18,7 +18,7 @@ import teknisilistrik from "../assets/teknisilistrik.png"
 import k3ahlielevatordaneskalator from "../assets/k3ahlieelevatordaneskalator.png"
 import teknisielevatordaneskalator from "../assets/teknisielevatordaneskalator.png"
 import ahlik3spesialiskebakarantingkatA from "../assets/ahlik3spesialiskebakarantingkatA.png"
-import petugaskoordinatorkebakarantingkatB from "../assets/petugas(koordinatorkebakarantingkatB.png"
+import petugaskoordinatorkebakarantingkatB from "../assets/petugaskoordinatorkebakarantingkatB.png"
 import petugasregukebakarantingkatC from "../assets/petugasregukeebakarantingkatC.png"
 import petugasperankebakarantingkatD from "../assets/petugasperankeebakarantingkatD.png"
 import k3madyakonstruksi from "../assets/k3mdayakontruksi.png"
@@ -26,6 +26,21 @@ import ahlik3mudakontruksi from "../assets/ahlik3mudakontruksi.png"
 import supervisiperancah from "../assets/supervisiperancah.png"
 import ahlik3pesawatangkatdanangkut from "../assets/ahlikk3pesawatangkkatdanangkut.png"
 import teknisipesawatangkatdanangkut from "../assets/teknisipesawatangkatdanangkut.png"
+import operatoroverheadcranekelas1 from "../assets/operator-overhead-crane-kelas-1.png"
+import operatoroverheadcranekelas2 from "../assets/operator-overhead-crane-kelas-2.png"
+import operatoroverheadcranekelas3 from "../assets/operator-oveerhead-crane-kelas-3.png"
+import operatorforkliftkelas1 from "../assets/operator-forklift-kelas-1.png"
+import operatorforkliftkelas2 from "../assets/operator-forklift-kelas-2.png"
+import operatoralatberat from "../assets/operator-alatberat.png"
+import juruikatriggerpitatransportconveyor from "../assets/juru-ikat-ringger-pita-transport-conveyor.png"
+import operatorgondola from "../assets/operator-gondola.png"
+import k3pesawattenagaproduksi from "../assets/ahli-k3-pesawat-tenaga-produksi.png"
+import teknisipesawattenagaproduksi from "../assets/teknisi-pesawat-tenaga-produksi.png"
+import operatorpenggerakmulamotordieselturbin from "../assets/operator-penggerak-mula.png"
+import operatormesinproduksidanperkakaskelas1 from "../assets/operator-production-perkakas-kelas1.png"
+import operatormesinproduksidanperkakaskelas2 from "../assets/Operator-Mesin-Produksi-dan-Perkakas-kelas2.png"
+import operatortanurkelas1 from "../assets/operator-tanur-kelas-1.png"
+import operatortanurkelas2 from "../assets/operator-tanur-kelas-2.png"
 
 
 
@@ -371,7 +386,7 @@ const ProgramPelatihan = [
     id: 31,
     title: "Operator Overhead Crane Kelas 1",
     category: "Pesawat Angkat dan Pesawat Angkut",
-    image: "",
+    image: operatoroverheadcranekelas1,
     description: "Kompetensi pengoperasian overhead crane kelas 1, teknik pengangkatan beban berat, dan pemeriksaan alat.",
     price: "Rp7.500.000",
     duration: "5 Hari",
@@ -381,7 +396,7 @@ const ProgramPelatihan = [
     id: 32,
     title: "Operator Overhead Crane Kelas 2",
     category: "Pesawat Angkat dan Pesawat Angkut",
-    image: "",
+    image: operatoroverheadcranekelas2,
     description: "Keterampilan pengoperasian overhead crane kelas 2, teknik pemindahan material, dan pengendalian risiko.",
     price: "Rp6.500.000",
     duration: "4 Hari",
@@ -391,7 +406,7 @@ const ProgramPelatihan = [
     id: 33,
     title: "Operator Overhead Crane Kelas 3",
     category: "Pesawat Angkat dan Pesawat Angkut",
-    image: "",
+    image: operatoroverheadcranekelas3,
     description: "Keterampilan dasar pengoperasian komponen crane kelas 3, pemeriksaan awal, dan prosedur kerja aman.",
     price: "Rp5.500.000",
     duration: "3 Hari",
@@ -401,7 +416,7 @@ const ProgramPelatihan = [
     id: 34,
     title: "Operator Forklift Kelas 1",
     category: "Pesawat Angkat dan Pesawat Angkut",
-    image: "",
+    image: operatorforkliftkelas1,
     description: "Kompetensi pengoperasian forklift kelas 1, teknik pindah muatan kapasitas tinggi, dan pemeriksaan kendaraan.",
     price: "Rp6.500.000",
     duration: "4 Hari",
@@ -411,7 +426,7 @@ const ProgramPelatihan = [
     id: 35,
     title: "Operator Forklift Kelas 2",
     category: "Pesawat Angkat dan Pesawat Angkut",
-    image: "",
+    image: operatorforkliftkelas2,
     description: "Keterampilan dasar pengoperasian forklift kelas 2, teknik pemindahan barang, dan pencegahan kecelakaan.",
     price: "Rp5.500.000",
     duration: "3 Hari",
@@ -421,7 +436,7 @@ const ProgramPelatihan = [
     id: 36,
     title: "Operator Alat Berat",
     category: "Pesawat Angkat dan Pesawat Angkut",
-    image: "",
+    image: operatoralatberat,
     description: "Kemampuan mengoperasikan alat berat industri/konstruksi, pemeriksaan mesin, dan teknik pemindahan material.",
     price: "Rp7.000.000",
     duration: "4 Hari",
@@ -431,7 +446,7 @@ const ProgramPelatihan = [
     id: 37,
     title: "Juru Ikat (Rigger), Pita Transport (Conveyor)",
     category: "Pesawat Angkat dan Pesawat Angkut",
-    image: "",
+    image: juruikatriggerpitatransportconveyor,
     description: "Pengetahuan teknik pengikatan beban (rigger), pemilihan alat bantu angkat, dan keselamatan sistem conveyor.",
     price: "Rp5.500.000",
     duration: "3 Hari",
@@ -441,7 +456,7 @@ const ProgramPelatihan = [
     id: 38,
     title: "Operator Gondola",
     category: "Pesawat Angkat dan Pesawat Angkut",
-    image: "",
+    image: operatorgondola,
     description: "Keterampilan pengoperasian gondola untuk gedung bertingkat, sistem pengamanan, APD, dan darurat.",
     price: "Rp6.500.000",
     duration: "3 Hari",
@@ -453,7 +468,7 @@ const ProgramPelatihan = [
     id: 39,
     title: "Ahli K3 Pesawat Tenaga dan Produksi",
     category: "Pesawat Tenaga dan Produksi",
-    image: "",
+    image: k3pesawattenagaproduksi,
     description: "Kompetensi pengawasan keselamatan mesin/peralatan produksi, bahaya mekanis, dan penerapan standar K3.",
     price: "Rp33.500.000",
     duration: "25 Hari",
@@ -463,7 +478,7 @@ const ProgramPelatihan = [
     id: 40,
     title: "Teknisi Pesawat Tenaga dan Produksi",
     category: "Pesawat Tenaga dan Produksi",
-    image: "",
+    image: teknisipesawattenagaproduksi,
     description: "Kemampuan pemeliharaan, perbaikan, dan identifikasi kerusakan komponen mesin penggerak serta produksi.",
     price: "Rp12.000.000",
     duration: "9 Hari",
@@ -473,7 +488,7 @@ const ProgramPelatihan = [
     id: 41,
     title: "Operator Penggerak Mula (Motor Diesel, Turbin)",
     category: "Pesawat Tenaga dan Produksi",
-    image: "",
+    image: operatorpenggerakmulamotordieselturbin,
     description: "Keterampilan mengoperasikan motor diesel dan turbin, pemantauan parameter mesin, serta pemeliharaan dasar.",
     price: "Rp7.000.000",
     duration: "4 Hari",
@@ -483,7 +498,7 @@ const ProgramPelatihan = [
     id: 42,
     title: "Operator Mesin Produksi dan Perkakas Kelas 1",
     category: "Pesawat Tenaga dan Produksi",
-    image: "",
+    image: operatormesinproduksidanperkakaskelas1,
     description: "Kemampuan pengoperasian mesin produksi kelas 1, teknik perkakas, pemeriksaan, dan keselamatan kerja.",
     price: "Rp8.000.000",
     duration: "5 Hari",
@@ -493,7 +508,7 @@ const ProgramPelatihan = [
     id: 43,
     title: "Operator Mesin Produksi dan Perkakas Kelas 2",
     category: "Pesawat Tenaga dan Produksi",
-    image: "",
+    image: operatormesinproduksidanperkakaskelas2,
     description: "Keterampilan pengoperasian mesin produksi kelas 2, pemeliharaan rutin, dan pencegahan kecelakaan kerja.",
     price: "Rp7.000.000",
     duration: "4 Hari",
@@ -503,7 +518,7 @@ const ProgramPelatihan = [
     id: 44,
     title: "Operator Tanur Kelas 1",
     category: "Pesawat Tenaga dan Produksi",
-    image: "",
+    image: operatortanurkelas1,
     description: "Kompetensi pengoperasian tanur/furnace kelas 1, pengaturan temperatur tinggi, dan pemantauan proses pemanasan.",
     price: "Rp8.000.000",
     duration: "5 Hari",
@@ -513,7 +528,7 @@ const ProgramPelatihan = [
     id: 45,
     title: "Operator Tanur Kelas 2",
     category: "Pesawat Tenaga dan Produksi",
-    image: "",
+    image: operatortanurkelas2,
     description: "Keterampilan pengoperasian tanur kelas 2, kontrol temperatur, prosedur operasional, dan mitigasi risiko panas.",
     price: "Rp7.000.000",
     duration: "4 Hari",
