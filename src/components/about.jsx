@@ -11,7 +11,7 @@ const About = () => {
         <div className="row justify-content-center text-center mb-5">
           <div className="col-lg-8">
             <span className="badge bg-danger bg-gradient px-3 py-2 rounded-pill fs-6 mb-2">
-              Sejak 2007
+              About Us
             </span>
             <h2 className="fw-bold display-5 text-dark">
               PT Geo Mandiri Kreasi

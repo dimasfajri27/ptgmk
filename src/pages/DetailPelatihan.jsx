@@ -33,6 +33,7 @@ function DetailPelatihan() {
               {pelatihan.image && (
                 <img
                   src={pelatihan.image}
+                  loading="lazy"
                   alt={pelatihan.title}
                   className="detail-image"
                 />

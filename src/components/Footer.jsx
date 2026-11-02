@@ -10,7 +10,7 @@ function Footer() {
             {/* bagian hijau */}
             <div className="footer-left">
                 <div className="footer-brand">
-                    <Link className="footer-brand-link" to="/">
+                    <Link className="footer-brand-linSk text-decoration-none text-black" to="/">
                     <img
                         src={logo}
                         alt="logo geo mandiri kreasi"

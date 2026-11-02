@@ -42,6 +42,7 @@ function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  
 
   const handleHomeClick = (e) => {
   e.preventDefault();
@@ -132,7 +133,7 @@ function Navbar() {
 
                  <Link
                  className="nav-link"
-                 to="/about"
+                 to="about"
                  onClick={closeMenu}>
                   About Us
                  </Link>
