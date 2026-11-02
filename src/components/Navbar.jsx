@@ -132,7 +132,7 @@ function Navbar() {
 
                  <Link
                  className="nav-link"
-                 to="/about"
+                 to="/about-us"
                  onClick={closeMenu}>
                   About Us
                  </Link>

@@ -190,3 +190,147 @@
     height: 300px;
   }
 }
+
+
+.vision-content,
+.mission-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.vision-content:hover,
+.mission-content:hover {
+    transform: translateY(-3px);
+}
+
+.vision-mission-banner {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 35px 30px;
+    margin: 30px 0;
+    border-radius: 20px;
+
+    background:
+        radial-gradient(
+            circle at 10% 50%,
+            rgba(0, 105, 70, 0.15),
+            transparent 35%
+        ),
+        linear-gradient(
+            110deg,
+            #dceee5,
+            #ffffff 50%,
+            #e3eee7
+        );
+
+    border: 1px solid #e0ebe4;
+    box-shadow: 0 5px 20px rgba(0, 69, 47, 0.08);
+}
+
+/* JUDUL */
+
+.vision-mission-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 18px;
+}
+
+.vision-mission-title span {
+    width: 100px;
+    height: 2px;
+    background-color: #08764d;
+}
+
+.vision-mission-title h2 {
+    color: #00452f;
+    font-size: 30px;
+    font-weight: 800;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* IKON VISI DAN MISI */
+.vm-icon {
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #00563a;
+    color: white;
+    border-radius: 50%;
+
+    box-shadow: 0 5px 15px rgba(0, 69, 47, 0.15);
+}
+
+/* TEKS VISI DAN MISI */
+.vm-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.vm-label {
+    display: inline-block;
+    padding: 6px 27px;
+
+    background-color: #00563a;
+    color: white;
+
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.vm-text > p {
+    color: #25332d;
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* PEMBATAS VISI DAN MISI */
+.mission-content {
+    border-left: 1px solid rgba(0, 69, 47, 0.35);
+    padding-left: 25px;
+}
+
+/* RESPONSIVE TABLET */
+@media (max-width: 991px) {
+    .mission-content {
+        border-left: none;
+        border-top: 1px solid rgba(0, 69, 47, 0.25);
+        padding-left: 0;
+        padding-top: 25px;
+    }
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 576px) {
+    .vm-icon {
+        width: 55px;
+        height: 55px;
+    }
+
+    .vm-icon svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .vm-label {
+        font-size: 14px;
+        padding: 5px 20px;
+    }
+
+    .vm-text > p {
+        font-size: 13px;
+    }
+}

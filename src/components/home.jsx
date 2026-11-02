@@ -1,8 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import carousel1 from "../assets/carousel1.png";
-import carousel2 from "../assets/carousel2.png";
-import carousel3 from "../assets/carousel3.png";
+
 
 
 function Home() {

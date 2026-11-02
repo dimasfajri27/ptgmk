@@ -1,6 +1,12 @@
 
 import React from 'react';
-import { ShieldCheck, Award, FileCheck, Users, Wrench, Building2 } from 'lucide-react';
+import { ShieldCheck, 
+          Users,
+          Wrench, 
+          Building2,
+          Eye,
+        Target} from 'lucide-react';
+import "./about.css";
 
 const About = () => {
   return (
@@ -11,7 +17,7 @@ const About = () => {
         <div className="row justify-content-center text-center mb-5">
           <div className="col-lg-8">
             <span className="badge bg-danger bg-gradient px-3 py-2 rounded-pill fs-6 mb-2">
-              Sejak 2007
+              About Us
             </span>
             <h2 className="fw-bold display-5 text-dark">
               PT Geo Mandiri Kreasi
@@ -65,6 +71,49 @@ const About = () => {
             </div>
           </div>
         </div>
+
+        {/* Visi & Misi */}
+        <section className="vision-mission-banner">
+          <div className="vision-mission-title">
+            <span></span>
+            <h2>Visi & Misi</h2>
+            <span></span>
+          </div>
+
+          <div className="row align-items-center g-4">
+
+            {/* bagian visi */}
+            <div className="col-lg-6">
+              <div className="vision-content">
+                <div className="vm-icon">
+                  <Eye size={48} strokeWidth={2.2}/>
+                </div>
+
+                <div className="vm-text">
+                  <span className="vm-label">Visi</span>
+
+                  <p>
+                    Menjadi perusahaan konsultan, training, dan inspeksi yang terdepan dan andal dengan kualitas pelayanan terbaik di bidangnya.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+            {/* bagian misi */}
+            <div className="col-lg-6">
+              <div className="mission-content">
+                <div className="vm-icon">
+                  <Target size={48} strokeWidth={2.2}/>
+                </div>
+                <div className="vm-text">
+                  <span className="vm-label">Misi</span>
+                  <p>Melayani pelanggan dengan kualitas produk 
+                    terbaik serta menjadikan jasa yang kami berikan sebagai layanan teratas di bidangnya.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Layanan Utama Grid */}
         <div className="row mb-4">
