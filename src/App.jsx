@@ -42,7 +42,7 @@ function App() {
           />
 
           <Route
-            path="/about"
+            path="/about-us"
             element={<About />}
           />
         </Routes>

@@ -31,14 +31,14 @@ function Home() {
           <h2 className="card-title mt-auto  fw-bold">PT. Geo Mandiri Kreasi</h2>
           <p className="card-text">
             Training sertifikasi k3 umum, training consultan, training sdm,
-            safety training dengan sertifikat resmi kemnaker RI. 
+            safety training dengan sertifikat resmi kemnaker RI. </p>
             <br />
             <br />
             <p className="fw-bold">(AHLI K3 UMUM,
             AHLI MUDA K3 KONSTRUKSI, AUDITOR SMK 3, PETUGAS P3K, PETUGAS PERAN
             KEBAKARAN (Kelas D), AHLI K3 LISTRIK, TEKNISI K3 LISTRIK, SUPERVISOR
             PERANCAH, AHLI K3 LINGKUNGAN KERJA)</p>
-          </p>
+          
           <div className="card-text list-border ">
            
           </div>

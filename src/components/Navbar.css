@@ -1,11 +1,11 @@
-/* Nabvar saat diposisi paling atas */
 .navbar-custom {
-    position: sticky;
-    top: 6px;
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: 1000;
+    width: 100%;
 
-width: min(870px, calc(100% - 32px));
-margin: 6px auto 0;
+
 
 /* background transparan  */
 background-color: rgba(220, 235, 220, 0.35) !important;
@@ -49,20 +49,89 @@ transition: all 0.3s ease;
     color: #d6b45c;
 }
 
-/* warna tombol menu mobile */
-.navbar-custom .navbar-toggler{
-    border-color: rgba(0, 69, 47, 0.5);
+.navbar-menu{
+    display: flex;
+    justify-content: flex-end;
 }
 
+.navbar-menu .navbar-nav{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.navbar-custom .navbar-toggler {
+    border-color: rgba(0, 69, 47, 0.5);
+}
 .navbar-custom .navbar-toggler-icon {
     filter: brightness(0) saturate(100%) invert(20%) sepia(30%)
     saturate(1200%) hue-rotate(110deg);
 }
 
-.navbar-custom.scrolled .navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.5);
+
+
+@media (max-width: 991.98px){
+
+    .navbar-overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+
+        background-color: rgba(0, 0, 0, 0.45);
+        z-index: 1001;
+    }
+
+    /* sidebar menu */
+    .navbar-menu{
+        position: fixed;
+        top: 0;
+        right: 0;
+
+        width: 50%;
+        max-width: 320px;
+        min-width: 220px;
+        height: 100vh;
+
+        background-color: #ffffff;
+        padding: 100px 20px 30px;
+        display: block;
+        z-index: 1002;
+        transform: translateX(100%);
+        visibility: hidden;
+
+        transition: trasform 0.35s ease,
+                    visibility 0.35s ease;
+
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .navbar-menu.show{
+        transform: translateX(0);
+        visibility: visible;
+    }
+    .navbar-menu .navbar-nav{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .navbar-menu .nav-link{
+        color: #00452f !important;
+        font-size: 16px;
+        padding: 10px 5px;
+        border-bottom: 1px solid rgba(0, 69, 47, 0.1);
+    }
+    .navbar-menu .nav-link:hover{
+        color: #c49a36 !important;
+    }
+    .navbar-custom .navbar-toggler{
+        position: relative;
+        z-index: 1003;
+    }
 }
 
-.navbar-custom.scrolled .navbar-toggler-icon{
-    filter:  brightness(0) invert(1);
+
+#program {
+    scroll-margin-top: 125px;
 }
