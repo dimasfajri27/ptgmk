@@ -82,7 +82,7 @@ function Footer() {
                     </h5>
 
                     <div className="footer-map">
-                        <iframe src="https://maps.google.com/maps?q=-6.2469445,106.9038366&z=17&output=embed"
+                        <iframe src="https://maps.google.com/maps?q=--6.247238660370986,106.9067775286933&output=embed"
                          width="100%"
                          height="180"
                          style={{border: 0}}
