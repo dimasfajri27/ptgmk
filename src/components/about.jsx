@@ -10,7 +10,7 @@ import "./about.css";
 
 const About = () => {
   return (
-    <section className="py-5 bg-light" id="about">
+    <section  id="about" className="py-5 bg-light">
       <div className="container py-4">
         
         {/* Header Section */}

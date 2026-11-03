@@ -12,12 +12,12 @@ function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const closeMenu = ()=>{
+  const closeMenu = () => {
     setMenuOpen(false);
   };
 
-  useEffect(() =>{
-    const handleKeyDown = (e) =>{
+  useEffect(() => {
+    const handleKeyDown = (e) => {
       if (e.key === "Escape") {
         closeMenu();
       }
@@ -43,20 +43,20 @@ function Navbar() {
     };
   }, []);
 
+  // fungsi tombol home
   const handleHomeClick = (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  if (location.pathname === "/") {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  } else {
-    navigate("/");
-  }
-};
+    if (location.pathname === "/") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    } else {
+      navigate("/");
+    }
+  };
 
-  
   // Fungsi menuju Program Latihan
   const handleProgramClick = (e) => {
     e.preventDefault();
@@ -70,28 +70,50 @@ function Navbar() {
     }
   };
 
-  // Scroll ke Program Latihan setelah kembali ke halaman utama
-  useEffect(() => {
-    if (location.pathname === "/" && location.hash === "#program") {
-      const timer = setTimeout(() => {
-        document.getElementById("program")?.scrollIntoView({
-          behavior: "smooth",
-        });
-      }, 300);
+  //Fungsu menuju About us
+  const handleAboutClick = (e) => {
+    e.preventDefault();
+    closeMenu();
 
-      return () => clearTimeout(timer);
-    } else {
-      window.scrollTo({
-        top: 0,
+    if (location.pathname === "/") {
+      document.getElementById("about")?.scrollIntoView({
         behavior: "smooth",
       });
+    } else {
+      navigate("/#about");
+    }
+  };
+  // Auto scroll berdasarkan Hash URL saat berpindah halaman atau load awal
+  useEffect(() => {
+    if (location.pathname === "/") {
+      if (location.hash === "#program") {
+        const timer = setTimeout(() => {
+          document.getElementById("program")?.scrollIntoView({
+            behavior: "smooth",
+          });
+        }, 200);
+        return () => clearTimeout(timer);
+      } else if (location.hash === "#about") {
+        const timer = setTimeout(() => {
+          document.getElementById("about")?.scrollIntoView({
+            behavior: "smooth",
+          });
+        }, 200);
+        return () => clearTimeout(timer);
+      } else if (!location.hash) {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
     }
   }, [location.pathname, location.hash]);
 
   return (
-    <nav className={`navbar navbar-expand-lg navbar-custom ${scrolled ? "scrolled" : ""}`}>
+    <nav
+      className={`navbar navbar-expand-lg navbar-custom ${scrolled ? "scrolled" : ""}`}
+    >
       <div className="container-fluid">
-
         <Link className="navbar-brand d-flex align-items-center" to="/">
           <img
             src={logo}
@@ -104,7 +126,7 @@ function Navbar() {
         </Link>
 
         <button
-          className= {`navbar-toggler ${menuOpen ? "active" :""}`}
+          className={`navbar-toggler ${menuOpen ? "active" : ""}`}
           type="button"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-expanded={menuOpen}
@@ -113,34 +135,32 @@ function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
+        {menuOpen && (
+          <div className="navbar-overlay" onClick={closeMenu}>
+            {" "}
+          </div>
+        )}
 
-          {menuOpen && ( 
-            <div className="navbar-overlay" onClick={closeMenu}> </div>
-          )}
+        <div className={`navbar-menu ${menuOpen ? "show" : ""}`}>
+          <div className="navbar-nav">
+            <a className="nav-link" href="/" onClick={handleHomeClick}>
+              Home
+            </a>
 
-            <div className={`navbar-menu ${menuOpen ? "show" : ""}`}>
-              <div className="navbar-nav">
-                <a  
-                className="nav-link"
-                href="/"
-                onClick={handleHomeClick}>Home</a>
+            <a
+              className="nav-link"
+              href="/#program"
+              onClick={handleProgramClick}
+            >
+              {" "}
+              Program Pelatihan
+            </a>
 
-                <a 
-                className="nav-link"
-                 href="/#program"
-                 onClick={handleProgramClick}> Program Pelatihan</a>
-
-                 <Link
-                 className="nav-link"
-                 to="/about-us"
-                 onClick={closeMenu}>
-                  About Us
-                 </Link>
-
-              </div>
-
-            </div>
-
+            <Link className="nav-link" to="/#about" onClick={handleAboutClick}>
+              About Us
+            </Link>
+          </div>
+        </div>
       </div>
     </nav>
   );
