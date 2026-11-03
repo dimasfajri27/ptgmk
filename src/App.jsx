@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
@@ -7,10 +6,14 @@ import Home from "./components/home";
 import ContentProglat from "./components/ContentProglat";
 import DetailPelatihan from "./pages/DetailPelatihan";
 import About from "./components/about";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+      {/* Otomatis scroll ke atas ketika berpindah halaman */}
+      <ScrollToTop />
+
       <Navbar />
 
       <main>
@@ -22,19 +25,10 @@ function App() {
                 <Home />
                 <About />
                 <ContentProglat />
+                
               </>
             }
           />
-
-          {/* <Route
-            path="/home"
-            element={
-              <>
-                <Home />
-                <ContentProglat />
-              </>
-            }
-          /> */}
 
           <Route
             path="/pelatihan/:id"
