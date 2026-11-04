@@ -1,5 +1,11 @@
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useLayoutEffect } from "react";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  useLocation
+} from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -8,9 +14,34 @@ import ContentProglat from "./components/ContentProglat";
 import DetailPelatihan from "./pages/DetailPelatihan";
 import About from "./components/about";
 
-function App() {
+// Mengatur posisi scroll ketika berpindah halaman
+function ScrollManager() {
+  const { pathname } = useLocation();
+
+  useLayoutEffect(() => {
+    const root = document.documentElement;
+    const previousBehavior = root.style.scrollBehavior;
+
+    // Menonaktifkan animasi scroll sementara
+    root.style.scrollBehavior = "auto";
+
+    // Memindahkan halaman ke posisi paling atas secara langsung
+    window.scrollTo(0, 0);
+
+    // Mengembalikan pengaturan scroll sebelumnya
+    root.style.scrollBehavior = previousBehavior;
+
+  }, [pathname]);
+
+  return null;
+}
+
+// Komponen utama aplikasi
+function AppContent() {
   return (
-    <BrowserRouter>
+    <>
+      <ScrollManager />
+
       <Navbar />
 
       <main>
@@ -26,16 +57,6 @@ function App() {
             }
           />
 
-          {/* <Route
-            path="/home"
-            element={
-              <>
-                <Home />
-                <ContentProglat />
-              </>
-            }
-          /> */}
-
           <Route
             path="/pelatihan/:id"
             element={<DetailPelatihan />}
@@ -49,6 +70,15 @@ function App() {
       </main>
 
       <Footer />
+    </>
+  );
+}
+
+// Komponen App
+function App() {
+  return (
+    <BrowserRouter>
+      <AppContent />
     </BrowserRouter>
   );
 }

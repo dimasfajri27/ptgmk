@@ -3,9 +3,19 @@ import { useParams } from "react-router-dom";
 import ProgramPelatihan from "../data/ProgramPelatihan";
 import FormPendaftaran from "../components/FormPendaftaran";
 import "./DetailPelatihan.css";
+import { useEffect } from "react";
 
 function DetailPelatihan() {
   const { id } = useParams();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "auto",
+    });
+  }, [id]);
+
 
   const pelatihan = ProgramPelatihan.find(
     (item) => item.id === Number(id)

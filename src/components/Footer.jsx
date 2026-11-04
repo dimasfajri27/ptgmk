@@ -2,6 +2,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import { Link } from "react-router-dom";
 import "./Footer.css";
 import logo from "../assets/logo.png";
+import ourClient from "../assets/OurClient/our-client.png";
 
 function Footer() {
     return(
@@ -24,6 +25,20 @@ function Footer() {
                         Consultant, Training & Inspection
                     </p>
                 </div>
+                    
+                {/*Bagian Kontainer Gambar Semua Logo Client */}
+                <div className="footer-clients-section my-3">
+                    <p className="text-white-100 small mb-2" style={{ letterSpacing: '1px', fontWeight: '600' }}>OUR CLIENTS</p>
+                    <div className="clients-image-wrapper">
+                        <img 
+                            src={ourClient} 
+                            alt="Our Clients" 
+                            className="img-fluid rounded p-2"
+                            style={{ maxWidth: '100%', height: 'auto', display: 'block' }}
+                        />
+                    </div>
+                </div>
+
 
                 <div className="footer-copyright">
                     <hr className="border-secondary" />
@@ -70,7 +85,7 @@ function Footer() {
                     <div className="footer-quicklinks">
                         <h5>Quick Link</h5>
                         <a href="#home">Home</a>
-                        <a href="##program">Program Pelatihan</a>
+                        <a href="/#program">Program Pelatihan</a>
                         <a href="#about">About Us</a>
                      
                     </div>
@@ -82,9 +97,9 @@ function Footer() {
                     </h5>
 
                     <div className="footer-map">
-                        <iframe src="https://maps.google.com/maps?q=-6.2469445,106.9038366&z=17&output=embed"
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1237044775303!2d106.9067668!3d-6.2474253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f32b83252e77%3A0xd4495dbdb34e3f71!2sGeo%20Mandiri%20Kreasi.%20PT!5e0!3m2!1sid!2sid!4v1793774160097!5m2!1sid!2sid" 
                          width="100%"
-                         height="180"
+                         height="450"
                          style={{border: 0}}
                          allowFullScreen=""
                          loading="lazy"

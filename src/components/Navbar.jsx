@@ -1,3 +1,4 @@
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Navbar.css";
 
@@ -12,10 +13,12 @@ function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // Menutup menu navigasi
   const closeMenu = () => {
     setMenuOpen(false);
   };
 
+  // Menutup menu ketika tombol Escape ditekan
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === "Escape") {
@@ -43,13 +46,15 @@ function Navbar() {
     };
   }, []);
 
-  // fungsi tombol home
+  // Tombol Home
   const handleHomeClick = (e) => {
     e.preventDefault();
+    closeMenu();
 
     if (location.pathname === "/") {
       window.scrollTo({
         top: 0,
+        left: 0,
         behavior: "smooth",
       });
     } else {
@@ -57,20 +62,22 @@ function Navbar() {
     }
   };
 
-  // Fungsi menuju Program Latihan
+  // Menu Program Pelatihan
   const handleProgramClick = (e) => {
     e.preventDefault();
+    closeMenu();
 
     if (location.pathname === "/") {
       document.getElementById("program")?.scrollIntoView({
         behavior: "smooth",
+        block: "start",
       });
     } else {
       navigate("/#program");
     }
   };
 
-  //Fungsu menuju About us
+  // Menu About Us
   const handleAboutClick = (e) => {
     e.preventDefault();
     closeMenu();
@@ -78,43 +85,48 @@ function Navbar() {
     if (location.pathname === "/") {
       document.getElementById("about")?.scrollIntoView({
         behavior: "smooth",
+        block: "start",
       });
     } else {
       navigate("/#about");
     }
   };
-  // Auto scroll berdasarkan Hash URL saat berpindah halaman atau load awal
+
+  // Auto-scroll berdasarkan hash URL
   useEffect(() => {
-    if (location.pathname === "/") {
-      if (location.hash === "#program") {
-        const timer = setTimeout(() => {
-          document.getElementById("program")?.scrollIntoView({
-            behavior: "smooth",
-          });
-        }, 200);
-        return () => clearTimeout(timer);
-      } else if (location.hash === "#about") {
-        const timer = setTimeout(() => {
-          document.getElementById("about")?.scrollIntoView({
-            behavior: "smooth",
-          });
-        }, 200);
-        return () => clearTimeout(timer);
-      } else if (!location.hash) {
-        window.scrollTo({
-          top: 0,
+    if (location.pathname !== "/") return;
+
+    if (location.hash === "#program" || location.hash === "#about") {
+      const targetId = location.hash.substring(1);
+
+      const timer = setTimeout(() => {
+        document.getElementById(targetId)?.scrollIntoView({
           behavior: "smooth",
+          block: "start",
         });
-      }
+      }, 200);
+
+      return () => clearTimeout(timer);
     }
+
+    // Tidak melakukan smooth scroll ke atas ketika berpindah route.
+    // Pengaturan posisi scroll halaman ditangani oleh ScrollManager di App.jsx.
   }, [location.pathname, location.hash]);
 
   return (
     <nav
-      className={`navbar navbar-expand-lg navbar-custom ${scrolled ? "scrolled" : ""}`}
+      className={`navbar navbar-expand-lg navbar-custom ${
+        scrolled ? "scrolled" : ""
+      }`}
     >
       <div className="container-fluid">
-        <Link className="navbar-brand d-flex align-items-center" to="/">
+
+        {/* Logo dan nama perusahaan */}
+        <Link
+          className="navbar-brand d-flex align-items-center"
+          to="/"
+          onClick={closeMenu}
+        >
           <img
             src={logo}
             alt="logo geo mandiri kreasi"
@@ -125,6 +137,7 @@ function Navbar() {
           PT. Geo Mandiri Kreasi
         </Link>
 
+        {/* Tombol menu mobile */}
         <button
           className={`navbar-toggler ${menuOpen ? "active" : ""}`}
           type="button"
@@ -135,15 +148,23 @@ function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
+        {/* Overlay menu mobile */}
         {menuOpen && (
-          <div className="navbar-overlay" onClick={closeMenu}>
-            {" "}
-          </div>
+          <div
+            className="navbar-overlay"
+            onClick={closeMenu}
+          ></div>
         )}
 
+        {/* Menu navigasi */}
         <div className={`navbar-menu ${menuOpen ? "show" : ""}`}>
           <div className="navbar-nav">
-            <a className="nav-link" href="/" onClick={handleHomeClick}>
+
+            <a
+              className="nav-link"
+              href="/"
+              onClick={handleHomeClick}
+            >
               Home
             </a>
 
@@ -152,13 +173,17 @@ function Navbar() {
               href="/#program"
               onClick={handleProgramClick}
             >
-              {" "}
               Program Pelatihan
             </a>
 
-            <Link className="nav-link" to="/#about" onClick={handleAboutClick}>
+            <a
+              className="nav-link"
+              href="/#about"
+              onClick={handleAboutClick}
+            >
               About Us
-            </Link>
+            </a>
+
           </div>
         </div>
       </div>
