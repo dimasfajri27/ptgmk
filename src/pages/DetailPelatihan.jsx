@@ -5,7 +5,7 @@ import FormPendaftaran from "../components/FormPendaftaran";
 import "./DetailPelatihan.css";
 import { useEffect } from "react";
 
-function DetailPelatihan() {
+function DetailPelatihan({ selectedPelatihan = null }) {
   const { id } = useParams();
 
   useEffect(() => {
@@ -17,10 +17,9 @@ function DetailPelatihan() {
   }, [id]);
 
 
-  const pelatihan = ProgramPelatihan.find(
+  const pelatihan = selectedPelatihan || ProgramPelatihan.find(
     (item) => item.id === Number(id)
   );
-
   if (!pelatihan) {
     return <h2>Pelatihan tidak ditemukan.</h2>;
   }

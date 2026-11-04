@@ -1,4 +1,3 @@
-
 import { useLayoutEffect } from "react";
 import {
   BrowserRouter,
@@ -13,34 +12,13 @@ import Home from "./components/home";
 import ContentProglat from "./components/ContentProglat";
 import DetailPelatihan from "./pages/DetailPelatihan";
 import About from "./components/about";
+import ScrollToTop from "./components/ScrollToTop";
 
-// Mengatur posisi scroll ketika berpindah halaman
-function ScrollManager() {
-  const { pathname } = useLocation();
-
-  useLayoutEffect(() => {
-    const root = document.documentElement;
-    const previousBehavior = root.style.scrollBehavior;
-
-    // Menonaktifkan animasi scroll sementara
-    root.style.scrollBehavior = "auto";
-
-    // Memindahkan halaman ke posisi paling atas secara langsung
-    window.scrollTo(0, 0);
-
-    // Mengembalikan pengaturan scroll sebelumnya
-    root.style.scrollBehavior = previousBehavior;
-
-  }, [pathname]);
-
-  return null;
-}
-
-// Komponen utama aplikasi
-function AppContent() {
+function App() {
   return (
-    <>
-      <ScrollManager />
+    <BrowserRouter>
+      {/* Otomatis scroll ke atas ketika berpindah halaman */}
+      <ScrollToTop />
 
       <Navbar />
 
@@ -53,6 +31,7 @@ function AppContent() {
                 <Home />
                 <About />
                 <ContentProglat />
+                
               </>
             }
           />

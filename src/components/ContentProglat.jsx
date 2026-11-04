@@ -1,9 +1,22 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect, useRef } from "react";
 import ProgramPelatihan from "../data/ProgramPelatihan";
+import DetailPelatihan from "../pages/DetailPelatihan";
 
 function ContentProglat() {
   // State kategori yang dipilih
+
+  const [selectedPelatihan, setSelectedPelatihan] = useState(null);
+
+  const detailRef = useRef(null);
+
+  useEffect(() => {
+    if (selectedPelatihan) {
+      detailRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, [selectedPelatihan]);
   const [selectedCategory, setSelectedCategory] = useState("Semua");
 
   // State untuk input pencarian (Search)
@@ -19,6 +32,7 @@ function ContentProglat() {
   const filteredItems = items.filter((item) => {
     const matchesCategory =
       selectedCategory === "Semua" || item.category === selectedCategory;
+
 
     // Pencarian berdasarkan judul atau deskripsi pelatihan
     const matchesSearch =
@@ -278,12 +292,26 @@ function ContentProglat() {
                     {/* Tombol Lihat Detail */}
                     <div className="card-text">
 
-                      <Link
-                        to={`/pelatihan/${item.id}`}
+                      <button
+                        type="button"
                         className="btn btn-primary btn-sm px-3"
+                        style={{ transition: "all 0.3s ease" }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.transform =
+                            "translateY(-2px)";
+
+                          e.currentTarget.style.boxShadow =
+                            "0 4px 12px rgba(0, 0, 0, 0.3)";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.transform =
+                            "translateY(0)";
+
+                          e.currentTarget.style.boxShadow = "none";
+                        }}
                       >
-                        Lihat Detail
-                      </Link>
+                        Daftar
+                      </button>
 
                     </div>
 
@@ -339,6 +367,27 @@ function ContentProglat() {
         )}
 
       </div>
+      {/* DETAIL PELATIHAN */}
+      {selectedPelatihan && (
+        <div
+          ref={detailRef}
+          className="container mb-5"
+          id="detail-pelatihan"
+        >
+          <DetailPelatihan
+            selectedPelatihan={selectedPelatihan}
+          />
+
+          <div className="text-center mt-4">
+            <button
+              className="btn btn-outline-secondary"
+              onClick={() => setSelectedPelatihan(null)}
+            >
+              Tutup Detail
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 }

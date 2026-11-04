@@ -85,9 +85,7 @@ const About = () => {
             {/* bagian visi */}
             <div className="col-lg-6">
               <div className="vision-content">
-                <div className="vm-icon">
-                  <Eye size={48} strokeWidth={2.2}/>
-                </div>
+                
 
                 <div className="vm-text">
                   <span className="vm-label">Visi</span>
@@ -102,9 +100,6 @@ const About = () => {
             {/* bagian misi */}
             <div className="col-lg-6">
               <div className="mission-content">
-                <div className="vm-icon">
-                  <Target size={48} strokeWidth={2.2}/>
-                </div>
                 <div className="vm-text">
                   <span className="vm-label">Misi</span>
                   <p>Melayani pelanggan dengan kualitas produk 
@@ -188,7 +183,7 @@ const About = () => {
         {/* Stats Section */}
         <div className="row mt-5">
           <div className="col-12">
-            <div className="bg-dark text-white rounded-4 p-4 p-md-5">
+            <div className="bg-white text-dark rounded-4 p-4 p-md-5 shadow">
               <div className="row text-center g-4">
                 <div className="col-6 col-md-3">
                   <h2 className="fw-bold text-warning mb-1">15+</h2>
