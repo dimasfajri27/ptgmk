@@ -1,9 +1,8 @@
-import { useLayoutEffect } from "react";
+
 import {
   BrowserRouter,
   Routes,
-  Route,
-  useLocation
+  Route
 } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
@@ -17,7 +16,6 @@ import ScrollToTop from "./components/ScrollToTop";
 function App() {
   return (
     <BrowserRouter>
-      {/* Otomatis scroll ke atas ketika berpindah halaman */}
       <ScrollToTop />
 
       <Navbar />
@@ -31,7 +29,6 @@ function App() {
                 <Home />
                 <About />
                 <ContentProglat />
-                
               </>
             }
           />
@@ -49,15 +46,6 @@ function App() {
       </main>
 
       <Footer />
-    </>
-  );
-}
-
-// Komponen App
-function App() {
-  return (
-    <BrowserRouter>
-      <AppContent />
     </BrowserRouter>
   );
 }

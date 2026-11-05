@@ -296,22 +296,23 @@ function ContentProglat() {
                         type="button"
                         className="btn btn-primary btn-sm px-3"
                         style={{ transition: "all 0.3s ease" }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.transform =
-                            "translateY(-2px)";
 
+                        onClick={() => setSelectedPelatihan(item)}
+
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.transform = "translateY(-2px)";
                           e.currentTarget.style.boxShadow =
                             "0 4px 12px rgba(0, 0, 0, 0.3)";
                         }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.transform =
-                            "translateY(0)";
 
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.transform = "translateY(0)";
                           e.currentTarget.style.boxShadow = "none";
                         }}
                       >
                         Daftar
                       </button>
+
 
                     </div>
 

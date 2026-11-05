@@ -1,49 +1,60 @@
+
 import { useState } from "react";
 
 function FormPendaftaran({ pelatihan }) {
-
   const [form, setForm] = useState({
     nama: "",
     email: "",
     nohp: ""
   });
 
-  function handleChange(e){
+  function handleChange(e) {
     setForm({
       ...form,
       [e.target.name]: e.target.value
     });
   }
 
-  function handleSubmit(e){
+  function handleSubmit(e) {
     e.preventDefault();
 
-    // 1. Tentukan nomor WhatsApp admin (Ganti dengan nomor WhatsApp kamu, 
-    // Format internasional tanpa tanda +, contoh: 6281234567890)
-    const nomorAdmin = "6281288465158"; 
+    const nomorAdmin = "6281288465158";
 
-    // 2. Ambil data pelatihan (pastikan properti harga sesuai, misal pelatihan.harga)
+    // Mengambil data pelatihan
     const namaPelatihan = pelatihan?.title || "Pelatihan";
-    const hargaPelatihan = pelatihan?.price || "Hubungi Admin";
-    const durasiPelatihan = pelatihan?.duration || "Durasi"
-    const instruktur = pelatihan?.instructor || instruktur
+    const hargaPelatihan =
+      typeof pelatihan?.price === "number"
+        ? `Rp ${pelatihan.price.toLocaleString("id-ID")}`
+        : pelatihan?.price || "Hubungi Admin";
 
-    // 3. Susun format pesan teks
-    const pesan = `Halo Admin, saya ingin mendaftar pelatihan.%0A%0A` +
-                  `*Detail Pendaftar:*%0A` +
-                  `- Nama: ${form.nama}%0A` +
-                  `- Email: ${form.email}%0A` +
-                  `- No HP: ${form.nohp}%0A%0A` +
-                  `*Detail Pelatihan:*%0A` +
-                  `- Program: ${namaPelatihan}%0A` +
-                  `- Harga: ${hargaPelatihan}%0A` +
-                  `- Instruktur: ${instruktur}%0A` +
-                  `- Durasi: ${durasiPelatihan}%0A`;
+    const durasiPelatihan =
+      pelatihan?.duration || "Belum ditentukan";
 
-    // 4. Buka link WhatsApp di tab baru
-    window.open(`https://wa.me/${nomorAdmin}?text=${pesan}`, "_blank");
+    const instruktur =
+      pelatihan?.instructor || "Belum ditentukan";
 
-    // 5. Reset form setelah tombol diklik (opsional)
+    // Membuat pesan WhatsApp
+    const pesan = `
+Halo Admin, saya ingin mendaftar pelatihan.
+
+*Detail Pendaftar:*
+- Nama: ${form.nama}
+- Email: ${form.email}
+- No HP: ${form.nohp}
+
+*Detail Pelatihan:*
+- Program: ${namaPelatihan}
+- Harga: ${hargaPelatihan}
+- Instruktur: ${instruktur}
+- Durasi: ${durasiPelatihan}
+    `;
+
+    // Membuka WhatsApp
+    const url = `https://wa.me/${nomorAdmin}?text=${encodeURIComponent(pesan)}`;
+
+    window.open(url, "_blank");
+
+    // Reset form
     setForm({
       nama: "",
       email: "",
@@ -52,13 +63,13 @@ function FormPendaftaran({ pelatihan }) {
   }
 
   return (
-    <div className="mt-5">
-      <h2>Form Pendaftaran</h2>
-      
+    <div className="mt-3">
       <form onSubmit={handleSubmit}>
+
         <input
           name="nama"
-          placeholder="Nama"
+          type="text"
+          placeholder="Nama Lengkap"
           value={form.nama}
           onChange={handleChange}
           className="form-control mb-3"
@@ -86,11 +97,12 @@ function FormPendaftaran({ pelatihan }) {
         />
 
         <button
-          className="btn btn-success"
+          className="btn btn-success w-100"
           type="submit"
         >
           Kirim Pendaftaran via WhatsApp
         </button>
+
       </form>
     </div>
   );

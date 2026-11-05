@@ -3,31 +3,32 @@ import { useParams } from "react-router-dom";
 import ProgramPelatihan from "../data/ProgramPelatihan";
 import FormPendaftaran from "../components/FormPendaftaran";
 import "./DetailPelatihan.css";
-import { useEffect } from "react";
 
 function DetailPelatihan({ selectedPelatihan = null }) {
   const { id } = useParams();
 
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "auto",
-    });
-  }, [id]);
+  // Mengambil data pelatihan yang dipilih
+  // Jika tidak ada, ambil berdasarkan ID URL
+  const pelatihan =
+    selectedPelatihan ||
+    ProgramPelatihan.find(
+      (item) => item.id === Number(id)
+    );
 
-
-  const pelatihan = selectedPelatihan || ProgramPelatihan.find(
-    (item) => item.id === Number(id)
-  );
+  // Jika data tidak ditemukan
   if (!pelatihan) {
-    return <h2>Pelatihan tidak ditemukan.</h2>;
+    return (
+      <div className="container my-5">
+        <h2>Pelatihan tidak ditemukan.</h2>
+      </div>
+    );
   }
 
+  // Format harga
   const harga =
     typeof pelatihan.price === "number"
       ? `Rp ${pelatihan.price.toLocaleString("id-ID")}`
-      : pelatihan.price || "Hubungi admin";
+      : pelatihan.price || "Hubungi Admin";
 
   return (
     <div className="detail-page">
@@ -38,6 +39,7 @@ function DetailPelatihan({ selectedPelatihan = null }) {
           {/* KOLOM KIRI: DETAIL PELATIHAN */}
           <div className="detail-content">
 
+            {/* Gambar Pelatihan */}
             <div className="detail-image-wrapper">
               {pelatihan.image && (
                 <img
@@ -49,27 +51,36 @@ function DetailPelatihan({ selectedPelatihan = null }) {
               )}
             </div>
 
+            {/* Judul dan Deskripsi */}
             <div className="detail-heading">
               <h1>{pelatihan.title}</h1>
+
               <p>{pelatihan.description}</p>
             </div>
 
             {/* INFORMASI PELATIHAN */}
             <div className="detail-information">
 
+              {/* Biaya */}
               <div className="detail-information-item">
                 <h5>Biaya</h5>
                 <p>{harga}</p>
               </div>
 
+              {/* Durasi */}
               <div className="detail-information-item">
                 <h5>Durasi</h5>
-                <p>{pelatihan.duration || "Belum ditentukan"}</p>
+                <p>
+                  {pelatihan.duration || "Belum ditentukan"}
+                </p>
               </div>
 
+              {/* Instruktur */}
               <div className="detail-information-item">
                 <h5>Instruktur</h5>
-                <p>{pelatihan.instructor || "Belum ditentukan"}</p>
+                <p>
+                  {pelatihan.instructor || "Belum ditentukan"}
+                </p>
               </div>
 
             </div>
@@ -80,6 +91,7 @@ function DetailPelatihan({ selectedPelatihan = null }) {
           <div className="registration-column">
 
             <div className="registration-card">
+
               <h3>Form Pendaftaran</h3>
 
               <p className="registration-description">
@@ -87,7 +99,10 @@ function DetailPelatihan({ selectedPelatihan = null }) {
                 mendaftar pelatihan ini.
               </p>
 
-              <FormPendaftaran pelatihan={pelatihan} />
+              {/* Form Pendaftaran */}
+              <FormPendaftaran
+                pelatihan={pelatihan}
+              />
 
             </div>
 
