@@ -41,7 +41,11 @@ import operatormesinproduksidanperkakaskelas1 from "../assets/operator-productio
 import operatormesinproduksidanperkakaskelas2 from "../assets/Operator-Mesin-Produksi-dan-Perkakas-kelas2.png"
 import operatortanurkelas1 from "../assets/operator-tanur-kelas-1.png"
 import operatortanurkelas2 from "../assets/operator-tanur-kelas-2.png"
-
+import ahlik3pesawatuapbejanadantekan from "../assets/ahlik3-peawat-uap-bejana-tekan.png"
+import teknisitangkitimbunbejanatekan from "../assets/tknisi-tangki-timbun-bejana-tekan.png"
+import operatorboilerkelas1 from "../assets/operator-boiler-kelas-1.png"
+import operatorboilerkelas2 from "../assets/operator-boiler-kelas-2.png"
+import juruasgtawgmawkelas1 from "../assets/juru-las-GTAW-GMAW-kelas1.png"
 
 
 
@@ -540,7 +544,7 @@ const ProgramPelatihan = [
     id: 46,
     title: "Ahli K3 Pesawat Uap Bejana dan Tekan",
     category: "Pesawat Uap Bejana Tekan dan Tangki Timbun",
-    image: "",
+    image: ahlik3pesawatuapbejanadantekan,
     description: "Kompetensi pengawasan keselamatan pesawat uap dan bejana tekan, mitigasi bahaya tekanan/suhu tinggi.",
     price: "Rp33.500.000",
     duration: "25 Hari",
@@ -560,7 +564,7 @@ const ProgramPelatihan = [
     id: 48,
     title: "Teknisi Tangki Timbun dan Bejana Tekan",
     category: "Pesawat Uap Bejana Tekan dan Tangki Timbun",
-    image: "",
+    image: teknisitangkitimbunbejanatekan,
     description: "Kemampuan inspeksi tangki timbun dan bejana tekan, deteksi kebocoran, serta pemeliharaan konstruksi.",
     price: "Rp12.000.000",
     duration: "9 Hari",
@@ -570,7 +574,7 @@ const ProgramPelatihan = [
     id: 49,
     title: "Operator Boiler Kelas 1",
     category: "Pesawat Uap Bejana Tekan dan Tangki Timbun",
-    image: "",
+    image: operatorboilerkelas1,
     description: "Kompetensi pengoperasian boiler kelas 1, kontrol tekanan-temperatur, dan pengelolaan air umpan boiler.",
     price: "Rp9.000.000",
     duration: "6 Hari",
@@ -580,7 +584,7 @@ const ProgramPelatihan = [
     id: 50,
     title: "Operator Boiler Kelas 2",
     category: "Pesawat Uap Bejana Tekan dan Tangki Timbun",
-    image: "",
+    image: operatorboilerkelas2,
     description: "Keterampilan dasar pengoperasian boiler kelas 2, pemeriksaan awal, dan pemantauan mesin.",
     price: "Rp7.000.000",
     duration: "4 Hari",
@@ -592,7 +596,7 @@ const ProgramPelatihan = [
     id: 51,
     title: "Juru Las GTAW/GMAW Kelas 1",
     category: "Pengelasan",
-    image: "",
+    image: juruasgtawgmawkelas1,
     description: "Kompetensi pengelasan metode GTAW & GMAW kelas 1, persiapan material, parameter mesin, dan uji hasil las.",
     price: "Rp30.000.000",
     duration: "5 Hari",

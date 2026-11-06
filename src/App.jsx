@@ -13,6 +13,7 @@ import DetailPelatihan from "./pages/DetailPelatihan";
 import About from "./components/about";
 import ScrollToTop from "./components/ScrollToTop";
 
+
 function App() {
   return (
     <BrowserRouter>
