@@ -46,7 +46,15 @@ import teknisitangkitimbunbejanatekan from "../assets/tknisi-tangki-timbun-bejan
 import operatorboilerkelas1 from "../assets/operator-boiler-kelas-1.png"
 import operatorboilerkelas2 from "../assets/operator-boiler-kelas-2.png"
 import juruasgtawgmawkelas1 from "../assets/juru-las-GTAW-GMAW-kelas1.png"
-
+import jurulasgtawgmawkelas2 from "../assets/juru-las-GTAW-GMAW-kelas2.png"
+import jurulasgtawgmawkelas3 from "../assets/juru-las-GTAW-GMAW-kela3.png"
+import jurulaslistriksmawkelas1 from "../assets/juru-las-SMAW-kelas1.png"
+import jurulaslistriksmawkelas2 from "../assets/juru-las-SMAW-kelas2.png"
+import jurulaslistriksmawkelas3 from "../assets/juru-las-SMAW-kelas3.png"
+import jurulaskombinasigmawsmawkelas1 from "../assets/juru-las-kombinasi-GMAW-kelas1.png"
+import jurulaskombinasigmawsmawkelas2 from "../assets/juru-las-kombinasi-GMAW-kelas2.png"
+import jurulaskombinasigmawsmawkelas3 from "../assets/juru-las-kombinasi-GMAW-kelas3.png"
+import teknisipesawatuap from "../assets/yeeknisi-pesawat-uap.png"
 
 
 
@@ -554,7 +562,7 @@ const ProgramPelatihan = [
     id: 47,
     title: "Teknisi Pesawat Uap",
     category: "Pesawat Uap Bejana Tekan dan Tangki Timbun",
-    image: "",
+    image: teknisipesawatuap,
     description: "Keterampilan pemeriksaan, perawatan boiler/pesawat uap, sistem pembakaran, dan pengendalian tekanan.",
     price: "Rp12.000.000",
     duration: "9 Hari",
@@ -606,7 +614,7 @@ const ProgramPelatihan = [
     id: 52,
     title: "Juru Las GTAW/GMAW Kelas 2",
     category: "Pengelasan",
-    image: "",
+    image: jurulasgtawgmawkelas2,
     description: "Keterampilan pengelasan metode GTAW & GMAW kelas 2, teknik penyambungan, dan kontrol kualitas las.",
     price: "Rp25.000.000",
     duration: "5 Hari",
@@ -616,7 +624,7 @@ const ProgramPelatihan = [
     id: 53,
     title: "Juru Las GTAW/GMAW Kelas 3",
     category: "Pengelasan",
-    image: "",
+    image: jurulasgtawgmawkelas3,
     description: "Kemampuan dasar pengelasan GTAW & GMAW kelas 3, pengenalan alat, dan standar keselamatan las.",
     price: "Rp24.000.000",
     duration: "5 Hari",
@@ -626,7 +634,7 @@ const ProgramPelatihan = [
     id: 54,
     title: "Juru Las Listrik / SMAW Kelas 1",
     category: "Pengelasan",
-    image: "",
+    image: jurulaslistriksmawkelas1,
     description: "Kompetensi pengelasan listrik SMAW kelas 1, pemilihan elektroda, pengaturan arus, dan pengujian kualitas.",
     price: "Rp25.000.000",
     duration: "5 Hari",
@@ -636,7 +644,7 @@ const ProgramPelatihan = [
     id: 55,
     title: "Juru Las Listrik / SMAW Kelas 2",
     category: "Pengelasan",
-    image: "",
+    image: jurulaslistriksmawkelas2,
     description: "Keterampilan pengelasan SMAW kelas 2, parameter mesin, persiapan sambungan logam, dan keselamatan kerja.",
     price: "Rp24.000.000",
     duration: "5 Hari",
@@ -646,7 +654,7 @@ const ProgramPelatihan = [
     id: 56,
     title: "Juru Las Listrik / SMAW Kelas 3",
     category: "Pengelasan",
-    image: "",
+    image: jurulaslistriksmawkelas3,
     description: "Pengetahuan dan teknik dasar pengelasan SMAW kelas 3 serta pemeriksaan sambungan las.",
     price: "Rp23.000.000",
     duration: "5 Hari",
@@ -656,7 +664,7 @@ const ProgramPelatihan = [
     id: 57,
     title: "Juru Las Kombinasi GMAW / SMAW Kelas 1",
     category: "Pengelasan",
-    image: "",
+    image: jurulaskombinasigmawsmawkelas1,
     description: "Kompetensi pengelasan kombinasi GMAW & SMAW kelas 1 untuk berbagai posisi dan material khusus.",
     price: "Rp27.000.000",
     duration: "5 Hari",
@@ -666,7 +674,7 @@ const ProgramPelatihan = [
     id: 58,
     title: "Juru Las Kombinasi GMAW / SMAW Kelas 2",
     category: "Pengelasan",
-    image: "",
+    image: jurulaskombinasigmawsmawkelas2,
     description: "Keterampilan pengelasan kombinasi GMAW & SMAW kelas 2, parameter teknik, dan kontrol kualitas sambungan.",
     price: "Rp26.000.000",
     duration: "5 Hari",
@@ -676,7 +684,7 @@ const ProgramPelatihan = [
     id: 59,
     title: "Juru Las Kombinasi GMAW / SMAW Kelas 3",
     category: "Pengelasan",
-    image: "",
+    image: jurulaskombinasigmawsmawkelas3,
     description: "Kemampuan dasar pengelasan kombinasi GMAW & SMAW kelas 3, persiapan sambungan, dan pengecekan hasil.",
     price: "Rp25.000.000",
     duration: "5 Hari",
